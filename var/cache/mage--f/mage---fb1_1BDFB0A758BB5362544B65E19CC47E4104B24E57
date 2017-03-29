@@ -1,0 +1,74 @@
+
+
+
+
+
+<div class="new-itemslider-wrapper itemslider-wrapper-home" id="slide-ie78">
+	<h3 class="section-title">New Products</h3>
+    <div class="itemslider itemslider-horizontal itemslider-x">
+        <ul class="slides-home products-grid-home">
+                            <li class="item">
+                    <div class="wrapper-item">
+                    <a href="http://petshopngo.com/index.php/small-animal-bundle-habitat?___SID=U" title="Small Animal Bundle Habitat" class="product-image">
+<img style="height:180px; width:180px;" src="http://www.petstoresusa.com/psusa/images/BIO-35066915.jpg" alt="Small Animal Bundle Habitat" title="Small Animal Bundle Habitat" /></a>
+                                            		
+        <div class="infomaton-item">  
+                    <h3 class="product-name"><a href="http://petshopngo.com/index.php/small-animal-bundle-habitat?___SID=U" title="Small Animal Bundle Habitat">Small Animal Bundle Habitat</a></h3>
+                  
+                    
+
+                        
+    <div class="price-box">
+                                                                <span class="regular-price" id="product-price-122-new">
+                                            <span class="price">$76.10</span>                                    </span>
+                        
+        </div>
+
+                      
+         
+                      <div class="no-rxting">
+    <p class="no-rating">    </p><span class="rating00">(0)</span>
+    
+</div>
+   
+                   
+                                    
+                    
+            </div>
+                    
+                      
+  
+      </div> 
+              
+                </li>
+                
+                        <div class="clearer"></div>
+        </ul> <!-- end: slides -->
+    </div> <!-- end: itemslider -->
+
+</div> <!-- end: new-itemslider-wrapper -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+	jQuery(function($) {
+		$('.new-itemslider-wrapper .itemslider').flexslider({
+			namespace: "",
+			animation: "slide",
+			easing: "easeInQuart",
+			
+							slideshow: false,
+				animationLoop: false,
+						
+							animationSpeed: 400,
+						
+			pauseOnHover: false,
+			controlNav: false,
+			
+			controlsContainer: ".new-itemslider-wrapper .nav-wrapper",
+			
+			itemWidth: 188,
+			move: 0		});
+	});
+//]]>
+</script>

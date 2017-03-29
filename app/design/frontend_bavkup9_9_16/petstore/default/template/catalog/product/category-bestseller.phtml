@@ -1,0 +1,140 @@
+<?php
+
+/**
+ * @author Branko Ajzele | http://activecodeline.com | branko.ajzele@surgeworks.com
+ * @license GPL
+ */
+
+$_category = Mage::registry('current_category');
+if($_category) {
+$id = $_category->getId();
+
+$totalPerPage = ($this->show_total) ? $this->show_total :4;
+$counter = 1;
+$visibility = array(
+                      Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+                      Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+                  );
+
+$storeId = Mage::app()->getStore()->getId();
+
+$_productCollection = Mage::getResourceModel('reports/product_collection')
+                              ->addAttributeToSelect('*')
+                              ->addOrderedQty()
+                              ->addAttributeToFilter('visibility', $visibility)
+                              ->setStoreId($storeId)
+							  ->addCategoryFilter(Mage::getModel('catalog/category')->load($id))
+                              ->setOrder('ordered_qty', 'desc');
+
+}
+//Mage_Reports_Model_Mysql4_Product_Collection
+?>
+<div class="best-sellers">
+<div class="block-title"><?php echo $this->__('Only Natural Pet Store Best Sellers') ?></div>
+<div class="block-content sellers">
+<?php if($_productCollection){ ?>
+<?php foreach($_productCollection as $product): ?>
+<?php $i++ ;if($i == 1) {?>
+<?php
+        $categories = null;
+        foreach (explode(",", $product->category_ids) as $catId){
+
+          //Mage_Catalog_Model_Category
+          $cat = Mage::getModel('catalog/category')
+                        ->setStoreId(Mage::app()->getStore()->getId())
+                        ->load($catId);
+          $catName = $cat->getName();
+
+          $catLink = $cat->getUrlPath();
+          $categories .= '<a href="'.$catLink.'" title="'.$catName.'">'.$catName.'</a>&nbsp;&nbsp;';
+        }
+?>
+<?php if($counter <= $totalPerPage): ?>
+
+<?php $productUrl =  $product->getProductUrl() ?>
+
+<div class="item">
+
+<!-- <small><?php //echo $this->__('Total soled quantities') ?>: <?php //echo (int)$product->ordered_qty ?></small><br /> -->
+<div class="item-pro-best">
+<a class="product-image" href="<?php echo $productUrl ?>" title="View <?php echo $product->name ?>">
+	<img src="<?php echo $this->helper('catalog/image')->init($product, 'image')->resize(180); ?>" alt="Product image"  />
+</a>
+<div class="product-info">
+	<a class="product-name" href="<?php echo $productUrl ?>" title="View <?php echo $product->name ?>"><?php echo $product->name ?></a>
+	<div class="description">
+
+		    	<?php $sdesc = $product->short_description;
+				$sdesc = trim($sdesc);
+				$limit =100;
+    			if (strlen($sdesc) > $limit) {
+     			$sdesc = substr($sdesc, 0, strrpos(substr($sdesc, 0, $limit), ' '));
+    			} ?>
+				<?php echo $sdesc."..."; ?>
+ 
+	</div>
+	<div class="product-price">
+	 
+	      
+		<?php if($product->getPrice() == $product->getFinalPrice()):?> 
+			<div class="price-save">
+				<?php //$product->getPrice(); 
+				$formattedactualprice = Mage::helper('core')->currency($product->getPrice());
+				echo $formattedactualprice;?>
+			</div>
+		
+		<?php else:?> 
+			<?php //$product->getPrice(); 
+			$formattedactualprice = Mage::helper('core')->currency($product->getPrice());
+			echo $formattedactualprice;?>
+			
+			<div class="price-sale">
+				<?php $formattedspecialprice = Mage::helper('core')->currency($product->getFinalPrice()); 
+				echo $formattedspecialprice;?>
+			</div>
+		<?php endif;	?>
+		<div class="clr"></div>
+	</div>
+	<!-- --ratting -->
+	<?php
+$_reviews = Mage::getModel('review/review')->getResourceCollection();  
+
+  $_reviews->addStoreFilter( Mage::app()->getStore()->getId() )  
+            ->addEntityFilter('product', $product->getId())
+          ->addStatusFilter( Mage_Review_Model_Review::STATUS_APPROVED )  
+          ->setDateOrder()  
+          ->addRateVotes(); 
+
+        $avg = 0; 
+        $ratings = array(); 
+        $counter123=count($_reviews);
+  
+        if (count($_reviews) > 0){
+        foreach ($_reviews->getItems() as $_review): ?>
+        <?php foreach( $_review->getRatingVotes() as $_vote ): ?>
+                <?php $ratings[] = $_vote->getPercent();   ?>
+            <?php endforeach; ?>
+        <?php endforeach;   
+        $avg = array_sum($ratings)/count($ratings);  } 
+        ?> 
+ 
+ <div class="rating-box">  
+  <div class="rating" style="width: <?php echo ceil($avg) ; ?>%;"></div>  
+
+</div>
+ <span class="amount"><?php echo '('.$counter123.')' ;?></span>	
+        <!-- ---end ratting -->
+
+</div>
+<div class="clr"></div>
+</div><!-- -end item-pro-best -->
+
+<?php //echo $this->__('Categories: ') ?><?php //echo $categories ?>
+</div>
+
+<?php endif; $counter++; ?>
+<?php }?>
+<?php endforeach; ?>
+<?php } ?>
+</div>
+</div>

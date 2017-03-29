@@ -1,0 +1,1 @@
+jQuery(function($) {    $("img").lazyload({   threshold : 200,  effect : "fadeIn"   }); });

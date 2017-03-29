@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	
+	<!-- Product page -->
+    <catalog_product_view>
+
+		<reference name="head">
+			<action method="addItem"
+				ifconfig="cloudzoom/lightbox/enable"><type>skin_css</type><name>css/cmsmart/_shared/colorbox.css</name></action>
+			<!-- jQuery -->
+			<action method="addJs"><script>cmsmart/jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/jquery-noconflict.js</script></action>
+            <action method="addJs" ifconfig="cloudzoom/general/enable"><script>cmsmart/jquery/plugins/cloud-zoom.1.0.2.min.js</script></action>
+			<action method="addJs" ifconfig="cloudzoom/lightbox/enable"><script>cmsmart/jquery/plugins/jquery.colorbox-min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/plugins/jquery.flexslider-min.js</script></action>
+        </reference>
+
+        <reference name="product.info">
+            <action method="unsetChild"><name>product.info.media</name></action>
+            <block type="cmsmart_cloudzoom/product_view_media" name="product.info.media" as="media" template="cmsmart/cloudzoom/product/view/media.phtml">
+				<block type="cmsmart_cloudzoom/product_view_lightboxconfig" name="product.info.lightboxconfig" as="lightboxConfig" template="cmsmart/cloudzoom/product/view/lightbox_config.phtml" />
+			</block>
+        </reference>
+
+    </catalog_product_view>
+	
+	
+	
+	<!-- Reviews page -->
+    <review_product_list>
+	
+		<reference name="head">
+			
+            <!-- jQuery -->
+			<action method="addJs"><script>cmsmart/jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/jquery-noconflict.js</script></action>
+            <action method="addJs" ifconfig="cloudzoom/general/enable"><script>cmsmart/jquery/plugins/cloud-zoom.1.0.2.min.js</script></action>
+			<action method="addJs" ifconfig="cloudzoom/lightbox/enable"><script>cmsmart/jquery/plugins/jquery.colorbox-min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/plugins/jquery.flexslider-min.js</script></action>
+        </reference>
+
+        <reference name="product.info">
+            <action method="unsetChild"><name>product.info.media</name></action>
+            <block type="cmsmart_cloudzoom/product_view_media" name="product.info.media" as="media" template="cmsmart/cloudzoom/product/view/media.phtml">
+				<block type="cmsmart_cloudzoom/product_view_lightboxconfig" name="product.info.lightboxconfig" as="lightboxConfig" template="cmsmart/cloudzoom/product/view/lightbox_config.phtml" />
+			</block>
+        </reference>
+	
+    </review_product_list>
+	
+</layout>

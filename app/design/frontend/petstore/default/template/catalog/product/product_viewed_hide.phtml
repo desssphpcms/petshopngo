@@ -1,0 +1,37 @@
+<?php if ($_products = $this->getRecentlyViewedProducts()): ?>
+<div class="block recently-view">
+
+<h3 class="recent-title"><?php echo $this->__('People who viewed this also viewed') ?></h3>
+
+<div class="recently-content">
+<ul id="recently-viewed-items">
+<?php foreach ($_products as $_item): ?>
+  <?php $i ++ ; if ($i >=0 and $i  <= 5) {?>
+<li class="item">
+<div>
+<p class="product-name"><a href="<?php echo $this->getProductUrl($_item) ?>"><?php echo $this->helper('catalog/output')->productAttribute($_item, $_item->getName() , 'name') ?></a></p>
+<div class="img-recently">
+<a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image">
+<img class="product-image" src="<?php echo $this->helper('catalog/image')->init($_item, 'small_image')->resize(168, 168) ?>" width="168" height="168" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /> 
+</a>
+</div>
+
+
+<?php //if($_item->getRatingSummary()): ?>
+<?php echo $this->getReviewsSummaryHtml($_item, 'short' ,true) ?>
+<?php //endif; ?>
+<?php echo $this->getPriceHtml($_item, true, '-new') ?>
+<?php //if($_item->isSaleable()): ?>
+<!--            <button type="button" title="<?php //echo $this->__('Add to Cart') ?>"  onclick="setLocation('<?php //echo $this->getAddToCartUrl($_item) ?>')"><span><?php //echo $this->__('Add to cart') ?></span></button>
+<?php //else: ?>
+<p class="availability out-of-stock"><span><?php //echo $this->__('Out of stock') ?></span></p>
+<?php //endif; ?>
+-->        
+</li>
+<?php } ?>
+<?php endforeach; ?>
+</ul>
+<script type="text/javascript">decorateList('recently-viewed-items');</script>
+</div>
+</div>
+<?php endif; ?>

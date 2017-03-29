@@ -1,0 +1,76 @@
+<?php
+/**
+ * Cmsmart Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0).
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to obtain it through the world-wide-web, please send
+ * an email to info@Cmsmart.com so we can send you a copy immediately.
+ *
+ * @category   Cmsmart
+ * @package    Cmsmart_News
+ * @copyright  Copyright (c) 2010-2012 Cmsmart Co. 
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * side box template of news
+ *
+ * @category   Cmsmart
+ * @package    Cmsmart_News
+ * @author     VF 
+ */
+
+/**
+ * @var $this Cmsmart_News_Block_News
+ */
+?>
+<?php $news = $this->getNews(); ?>
+<?php $i = 0;?>
+<?php if ($news->count() > 0): ?>
+<div class="block news_bottom">
+	<div class=""></div>
+	
+	<h3><a href="<?php echo $this->getUrl('news'); ?>"><?php echo $this->__('News') ?></a></h3>
+	
+	<div class="block-content">
+		<?php foreach ($news as $news): ?>
+		<?php $idtest=$news->getId();?>
+		
+			<div class="tblock">
+			<div class="news_sidebar_box">
+			
+			<?php if ($news->getNewsImg()): ?>
+				
+				<div class="news_image"><img alt="<?php echo $news->getNewsName(); ?>" src="<?php echo Mage::getBaseUrl('media'). $news->getNewsImg() ?>" /></div>
+			<?php endif; ?>
+				<div><?php echo $news->getData('date'); ?></div>
+				<div class="news_sidebar_text">
+				<img src="<?php echo $this->getSkinUrl('images/image-left-1.png') ?>" style="float: left; margin-right:3px;"/>
+				<?php $sdesc = $news->getnewsText();
+				$sdesc = trim($sdesc);
+				$limit = 98;
+    			if (strlen($sdesc) > $limit) {
+     			$sdesc = substr($sdesc, 0, strrpos(substr($sdesc, 0, $limit), ' '));
+    			} ?>
+				<?php echo $sdesc."..."; ?>
+                
+				
+				<!-- <img src="<?php echo $this->getSkinUrl('images/image-left-2.png') ?>"/> -->
+				</div>
+			
+			</div>
+			</div>
+			<?php $i++;?>
+			<div class="actions">
+			<a href="<?php echo $this->getUrl('news',array('id'=>$idtest)); ?>"><?php echo $this->__('Read more...'); ?></a>
+			</div>
+		<?php endforeach; ?>
+		
+		    
+    </div>
+</div>
+<?php endif;?>

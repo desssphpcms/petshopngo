@@ -1,0 +1,24 @@
+
+
+<div class="Sale-category">
+<?php
+$_category = Mage::registry('current_category');
+if($_category) {
+	$id = $_category->getId();
+	$categoryc = Mage::getModel('catalog/category')->load($id);
+	$subcategories = explode(',', $categoryc->getChildren());
+	
+	foreach ($subcategories as $id){
+		$category = Mage::getModel('catalog/category')->load($id);
+		$img = Mage::getModel('catalog/category')->load($category->getId())->getThumbnail();
+	
+		echo '<li class="category-item"><a href="' .$category->getUrl(). '"><img src="'. Mage::getBaseUrl('media').'catalog/category/'. $img . '" width="174"; height="140";/>' ;
+		echo '<div class="title-cate"><h2>'.$category->getName().'</h2></div>' ;
+		echo '</a>';
+		echo '<a class="cate-view-all" href="' .$category->getUrl(). '">View All Category</a></li>';		
+				
+	}
+}
+?>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span>Browse By</span></strong>
+    </div>
+    <div class="block-content">
+        <dl id="narrow-by-list2">
+            <dt>Category</dt>
+            <dd>
+                <ol>
+                                                        <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/beds/heated-pads?___SID=U">Heated Pads</a> (2)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/beds/heated-beds?___SID=U">Heated Beds</a> (2)
+                    </li>
+                                                    </ol>
+            </dd>
+        </dl>
+        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
+    </div>
+</div>

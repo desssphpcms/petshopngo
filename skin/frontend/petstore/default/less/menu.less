@@ -1,0 +1,331 @@
+/* Main menu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+/* Accordion (generic)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.accordion {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+.accordion ul {
+	float:left;
+	display:block;
+	width:100%;
+	padding:0;
+	margin:0;
+}
+.accordion li {
+	float:left;
+	display:block;
+	width:100% !important;
+	padding:0 !important;
+	margin:0;
+	list-style-type:none;
+	cursor:pointer;
+	position:relative;
+}
+.accordion li a {
+	padding:5px 10px;
+	display:block;
+	cursor:pointer;
+}
+.accordion li li a { padding-left:20px; }
+.accordion li li li a { padding-left:35px; }
+.accordion li li li li a { padding-left:50px; }
+
+/* Opener
+-------------------------------------------------------------- */
+.accordion li.parent > a { padding-right:33px; }
+
+.accordion .opener {
+	position:absolute;
+	right:0;
+	top:0;
+	display:block;
+	width:28px;
+	height:28px;
+	background: url(../images/img/opener-small.png) center center no-repeat;
+}
+.accordion li.active > .opener {
+	background: url(../images/img/opener-small-active.png) center center no-repeat;
+}
+.accordion li.level0:hover > a, .accordion li.level1:hover > a, .accordion li.level2:hover > a,.accordion li.current > a{background-color: #E2E2E2;}
+/* Common styling for main menu (horizontal + mobile vertical + mobile menu trigger)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* horizontal + mobile menu trigger */
+#mobnav-trigger,
+#nav > li > a {
+	font-size:16px; /*1.3333em*/
+	line-height:49px; /*3.0625em*/
+	text-transform:uppercase;
+}
+
+
+/* Main menu - vertical (in the sidebar)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+.vertnav {
+	float:left;
+	width:100%;
+}
+.vertnav li a { border-bottom:1px solid #e5e5e5; }
+
+.vertnav li .opener,
+.vertnav li.active .opener { background-color:rgba(0,0,0, 0.02); }
+.vertnav li .opener:hover { background-color:rgba(0,0,0, 0.10); }
+
+
+/* Main menu - mobile vertical (in the header)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Mobile menu trigger. Shares styling with the 1st level links from the default menu
+-------------------------------------------------------------- */
+#mobnav { display:none; }
+#mobnav-trigger {
+	display:block;
+	padding:0 15px;
+}
+
+/* Mobile menu icon */
+	#mobnav-trigger .icon {
+		float:left;
+		width:23px;
+		padding-top:18px;
+		margin:0 8px 0 0;
+	}
+	#mobnav-trigger .icon .line {
+		background-color:#fff;
+		height:3px;
+		margin-bottom:2px;
+	}
+
+/* Mobile menu elements
+-------------------------------------------------------------- */
+.nav-container .vertnav-top { /* Added wrapper-class to make selector more specific and prevent overridding */
+	display:none;
+	margin-top:0 !important;
+}
+.vertnav-top.mobile {
+	display:block; /* Visible even if when collapsed (to show bottom border) */
+	
+	overflow:hidden;
+	height:auto;
+	max-height:0px;
+	-moz-transition-property:max-height;
+	-moz-transition-duration:500ms;
+	-moz-transition-timing-function:ease-in-out;
+}
+.vertnav-top.mobile.show {
+	max-height:9999px;
+	-moz-transition-property:max-height;
+	-moz-transition-duration:500ms;
+	-moz-transition-timing-function:ease-in-out;
+}
+
+.vertnav-top li a {
+	padding:15px 10px;
+	font-size:16px; /*1.3333em*/
+	line-height:19px;
+	text-transform:uppercase;
+}
+.vertnav-top li li a { padding-left:20px; }
+.vertnav-top li li li a { padding-left:40px; }
+.vertnav-top li li li li a { padding-left:60px; }
+
+/* Opener
+-------------------------------------------------------------- */
+.vertnav-top li.parent > a { padding-right:54px; }
+
+/* Default */
+	.vertnav-top li .opener {
+		width:49px;
+		height:49px;
+		background: url(../images/img/opener.png) center center no-repeat;
+	}
+	.vertnav-top li .opener:hover {
+		background-color:rgba(0,0,0, 0.05);
+	}
+
+/* Active */
+	.vertnav-top li.active > .opener {
+		background-image: url(../images/img/opener-active.png);
+	}
+
+
+
+/* Main menu - horizontal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+/**
+ * Wide drop-down menu
+ */
+
+/* Only 2nd level (first subcategory)
+-------------------------------------------------------------- */
+#nav ul.level0 {
+	position:absolute;	
+	top:49px;
+	left:0;
+	background-color:#fff;
+	width:500px;
+	padding:2%;
+}
+
+/* 2nd level only
+-------------------------------------------------------------- */
+/* 2-level links block: with subcategory title and a list of child categories */
+#nav ul.level0 > li {
+	display:inline-block;
+	float:none;
+	vertical-align:top;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#nav ul.level0 > li > a {
+	margin-bottom:10px;
+	font-size:1.3333em; /*16px*/
+	text-transform:uppercase;
+}
+
+/* 2nd level+
+-------------------------------------------------------------- */
+#nav ul li { float:none; }
+#nav ul li a { float:none; }
+
+/* 3rd level+
+-------------------------------------------------------------- */
+#nav ul ul { position:static !important; /*TODO:improve*/ }
+#nav ul ul li {
+	background:url(../images/img/bullet.png) 3px 6px no-repeat;
+	padding-left:15px;
+}
+
+
+/* 4th level
+-------------------------------------------------------------- */
+#nav ul.level2 { margin:7px 0; padding:0; }
+#nav ul.level2 a { font-size:0.9166em; line-height:1.2727em; /*11px 14px*/ opacity:0.6; }
+#nav li.level2:hover ul.level2 a {
+	opacity:1;
+}
+
+/* 4rd level+
+-------------------------------------------------------------- */
+#nav ul ul ul li { background:none; padding-left:0; }
+
+/* Drop-down box
+-------------------------------------------------------------- */
+#nav > li ul.level0 { display:none; }
+
+#nav {
+	position:relative; /* Dropdown custom block position is relative to this element */
+	z-index:2000;
+}
+#nav.mobile { display:none; } /* Hide on mobile */
+#nav .opener { display:none; }
+
+/* All Levels
+-------------------------------------------------------------- */
+#nav li { float:left; text-align:left; }
+#nav li a { display:block; float:left; text-decoration:none; }
+#nav li a span { display:block; white-space:nowrap; }
+#nav li ul a span { white-space:normal; }
+
+/* Only 1st level
+-------------------------------------------------------------- */
+#nav > li > a {
+	display:block;
+	padding:0 15px;
+}
+
+/* Additional custom elements in the main menu (horizontal)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
+
+/* Static blocks displayed as a drop-down in the main menu
+-------------------------------------------------------------- */
+/* Tab */
+#nav .nav-custom-link > a { cursor:default; }
+/* Remove 'relative' positioning from custom 'li' (custom block have to be positioned relative to #nav) */
+#nav li.nav-custom-link { position:static; }
+
+/* Drop-down box. Duplicate styling of wide menu: "#nav ul.level0" */
+#nav .nav-custom-link ul.level0 {
+	position:absolute;	
+	width:96%; /* 100% - padding */
+	padding:2%;
+}
+
+/* In classic menu, move drop-down box left */
+#nav.classic .nav-custom-link ul.level0 { left:-10000px; }
+#nav.classic .nav-custom-link ul.level0.shown-sub { left:0; }	
+	
+/* Static block's content
+-------------------------------------------------------------- */
+/* Wrapper of the block */
+#nav .nav-custom-link .header-nav-dropdown-wrapper { 
+	margin:0;
+	padding:10px;
+	position:static;
+	display:block;
+}
+
+/* Reset content of the custom block */
+#nav .nav-custom-link .header-nav-dropdown-wrapper * {
+	margin-top:0;
+	margin-bottom:0;
+	padding:0;
+	border:0;
+	background:none;
+	opacity:1; /* Override classic menu opacity transition */
+	box-shadow:none;
+}
+
+/* List and other elements */
+#nav .nav-custom-link .header-nav-dropdown-wrapper li {
+	float:left;
+	width:23.125%;
+	margin-right:2.5%;
+}
+#nav .nav-custom-link .header-nav-dropdown-wrapper li.last { margin-right:0; }
+#nav .nav-custom-link .header-nav-dropdown-wrapper p { margin:10px 0; }
+#nav .nav-custom-link .header-nav-dropdown-wrapper .heading { margin:10px 0; }
+/* Restore default display for drop-down block content */
+#nav .nav-custom-link .header-nav-dropdown-wrapper a { display:inline; }
+#nav ul.level0 li.level1{
+	width: 33% !important;
+}
+/* Dropdown submenu position is relative to this element.
+   It is displayed under the active tab. */
+#nav li { position:relative; }
+
+/* 2nd Level+
+-------------------------------------------------------------- */
+#nav ul {
+	position:absolute; 
+	top:49px;
+	left:-10000px;
+	background-color:#fff;
+	width:16em;
+	padding:20px 0;
+	border:0;
+}
+#nav div ul { position:static; width:auto; border:none; }
+#nav ul li { float:none; display:block; }
+#nav ul li.parent { background:url(../images/img/bullet.png) 93% center no-repeat; }
+#nav ul li a { float:none; padding:2px 25px; }
+
+/* 3rd Level+
+-------------------------------------------------------------- */
+#nav ul ul { top:0; }
+#nav li ul.shown-sub {
+	opacity:1;
+	left:0;
+	z-index:2000 !important;
+}
+#nav li .shown-sub ul.shown-sub { left:80px; }

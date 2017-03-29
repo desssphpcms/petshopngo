@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="2.0.0">	
+	<default>
+		<reference name="head">        
+            <action method="addJs"><script>cmsmart/jquery/jquery-1.7.2.min_license.js</script></action>	 
+			<action method="addJs"><script>cmsmart/jquery/license.js</script></action>		
+			<!-- <action method="addCss"><stylesheet>license.css</stylesheet></action> --> 
+        </reference>
+	</default>
+</layout>

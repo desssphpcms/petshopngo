@@ -1,0 +1,29 @@
+<div class="category-level2">
+<?php 
+$_category = Mage::registry('current_category');
+if($_category) {
+$id = $_category->getId();
+?> 
+<?php
+$categoryc = Mage::getModel('catalog/category')->load($id);
+$children = explode(',', $categoryc->getChildren()); 
+
+foreach ($children as $id){
+	$category=Mage::getModel('catalog/category')->load($id);
+	$product =  $category->getProductCount();
+	if($product != 0) {
+$img = Mage::getModel('catalog/category')->load($category->getId())->getThumbnail();
+
+echo '<div class="category-item"><a href="'.$category->getUrl().'">
+		<img src="'. Mage::getBaseUrl('media').'catalog/category/'. $category->getThumbnail() . '" width="180"; height="180";/></a>';
+
+echo '<div class="title-cate"><a href="'.$category->getUrl().'"><h2>'.$category->getName().'</h2></a></div>' ;     
+echo '<div class="cate-description">'.substr($category->getDescription(),0,60).'</div>' ;
+echo '<a class="cate-view-all" href="' .$category->getUrl(). '">View All Category</a>';
+echo '</div>';
+}
+}
+}
+?>
+
+</div>

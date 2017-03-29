@@ -1,0 +1,108 @@
+@import 'vars';
+
+
+#search_mini_form {
+	width: 200px;
+	height: 25px;
+	background: url("../images/imgpet/bg-form-search.png") no-repeat scroll 0 0 transparent;
+	margin: 8px 10px 0 0;
+	display: inline-block;
+	position: relative;
+	.right;
+	clear: none ! important;
+				label {
+			    display: none;
+			}
+	.input-text {
+		margin-left: 15px;
+		margin-top: 4px;
+		padding: 2px 0;
+		width: 148px;
+		border: medium none ! important;
+		display: inline-block;
+		font-size: 11px;
+		 color: rgb(175, 174, 174);
+	}
+
+	button.button span {
+		.no-bg;
+		span {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			.no-bg;
+			text-indent: -999em;
+			color: none ! important;
+			padding: 0px;
+		}
+	}
+
+	.search-autocomplete {
+		 position: absolute;
+		.no-border;
+		z-index: 999999;
+		left: -55px ! important;
+		top: 24px ! important;
+		ul.ajaxsearch {
+			padding: 10px 0;
+			border: 1px solid #d7d7d7 ! important;
+			border-radius: 5px 5px 5px 5px;
+			background: @text-color3;
+			box-shadow: 0 1.2px 3px #d7d7d7 ! important;
+			li.title {
+				.no-display;
+			}
+
+			li.preview {
+				margin: 10px 8px;
+				.meta_data {
+					display: inline-block;
+					padding: 0 10px;
+					 width: 135px;
+					.title {
+						font-size: 11px;
+						font-weight: normal;
+						&:hover {
+							color:@text-color1;
+						}
+					} 
+					.product-price {
+					font-family: chivo;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+input , select , textarea , button {
+	.no-bg;
+}
+
+.page-title h1 {
+	font-size: 20px;
+}
+
+li.nav-5 {
+	> ul.level0 {
+		max-height: 415px ! important;
+		min-height: 300px;
+		width: 470px;
+		> li.nav-5-3 {
+			top: -165px;
+		}
+
+		> li.last  {
+			left: 0px;
+			top:-175px;
+			clear: both !important;
+			a {
+				color: @text-color1 ! important;
+			}
+		}
+	}
+}
+li.nav-5 > ul.level0 > li.last > a {
+	.no-display;
+}

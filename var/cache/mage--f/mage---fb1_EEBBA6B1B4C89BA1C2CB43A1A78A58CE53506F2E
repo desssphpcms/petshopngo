@@ -1,0 +1,359 @@
+
+<div class="footer-container">
+
+	<div class="footer-top-container section-container">
+        <div class="footer-top footer container-footer stretched">
+            <div class="grid-full-footer">
+            
+                <div class="section clearer">
+                
+                	                                            <div class="item-float-left"></div>
+                                        
+                                                                <div class="item-float-left"><ul>
+<li><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/dog?___SID=U&amp;___store=default"><span>Dog</span></a></span>
+</li>
+<li><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/cats?___SID=U&amp;___store=default"><span>Cat</span></a></span>
+</li>
+<li><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/small-pet?___SID=U&amp;___store=default"><span>Small Pet</span></a></span>
+</li>
+<li><a href="http://petshopngo.com/index.php/bird.html?___SID=U"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/bird?___SID=U&amp;___store=default"><span>Bird</span></a></span>
+</a></li>
+<li><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/fish?___SID=U&amp;___store=default"><span>Fish</span></a></span>
+</li>
+<li><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/outdoor?___SID=U&amp;___store=default"><span>Outdoor</span></a></span>
+</li>
+</ul></div>
+					                    
+                                                            
+                </div> <!-- end: footer-top section -->
+                
+            </div> <!-- end: grid-full -->
+        </div> <!-- end: footer-top -->
+    </div>
+        
+    <div class="footer-primary-container section-container">
+        <div class="footer-primary footer_container show-bg">
+            <div class="grid-full">
+            
+                <div class="section clearer">
+					<div class="persistent-grid2-1 grid12-3 alpha">	<div class="section-space std"><h3>Shopping</h3>
+<ul>
+<li><a href="http://petshopngo.com/index.php/cat.html/?___SID=U"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/dog?___SID=U&amp;___store=default"><span>Dog</span></a></span>
+</a></li>
+<li><a href="http://petshopngo.com/index.php/fish.html/?___SID=Ul"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/cats?___SID=U&amp;___store=default"><span>Cat</span></a></span>
+</a></li>
+<li><a href="http://petshopngo.com/index.php/animal.html/?___SID=U"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/fish?___SID=U&amp;___store=default"><span>Fish</span></a></span>
+</a></li>
+<li><a href="http://petshopngo.com/index.php/animal.html/?___SID=U"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/small-pet?___SID=U&amp;___store=default"><span>Small Pet</span></a></span>
+</a></li>
+<li><a href="#"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/bird?___SID=U&amp;___store=default"><span>Bird</span></a></span>
+</a></li>
+<li><a href="#"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/fish/pond-supplies?___SID=U&amp;___store=default"><span>Pond Supplies</span></a></span>
+</a></li>
+<li><span style="font-size: 1.17em;"><span class="widget widget-category-link-inline"><a href="http://petshopngo.com/index.php/outdoor?___SID=U&amp;___store=default"><span>Outdoor</span></a></span>
+</span></li>
+</ul>
+<p><span class="border-bottom">&nbsp;</span></p>
+<h3>PayPal</h3>
+<p><a href="http://cmsmart.net/"><img alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/icon/pay.png" /></a><a href="http://cmsmart.net/"><img alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/icon/ame.png" /></a><a href="http://cmsmart.net/"><img alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/icon/mater.png" /></a><a href="http://cmsmart.net/"><img alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/icon/vida.png" /></a></p></div></div><div class="persistent-grid2-1 grid12-3">	<div class="section-space std"><h3>My Petstore</h3>
+<ul>
+<li><a href="http://petshopngo.com/index.php/customer/account/">My Account</a></li>
+<li><a href="http://petshopngo.com/index.php/sales/order/history/">Order Status</a></li>
+<li><a href="http://petshopngo.com/index.php/wishlist/">Quick Reorder</a></li>
+<li><a href="http://petshopngo.com/index.php/checkout/cart/">My Shopping List</a></li>
+</ul>
+<p><span class="border-bottom">&nbsp;</span></p>
+<p>
+<div id="subscribe-form" class="clearer">
+	<h3 for="newsletter">Newsletter</h3>
+     <span class="acymailing_introtext">Sign Up for Email</span>
+    <form action="http://petshopngo.com/index.php/newsletter/subscriber/new/?___SID=U" method="post" id="newsletterva">
+       
+            <div class="input-box">
+                <input type="text" name="email" id="newsletter" title="Sign up for our newsletter" class="input-text required-entry validate-email" />
+            </div>
+            <button type="submit" title="Subscribe" class="button btn-inline"><span></span></button>
+        
+    </form>
+  
+  </div>
+<script type="text/javascript">
+//<![CDATA[
+    var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+    new Varien.searchForm('newsletter-validate-detail', 'newsletter', 'Enter your email address');
+//]]>
+</script>
+</p>
+<p><span class="border-bottom">&nbsp;</span></p></div></div><div class="persistent-grid2-1 grid12-3">	<div class="section-space std"><h3>Our Store</h3>
+<ul>
+<li><a href="#">Store Locator</a></li>
+<li><a href="#">Store Offers &amp; Events</a></li>
+</ul>
+<h3>Petstore Services</h3>
+<ul>
+<li><a href="#">Affordable Vaccinations</a></li>
+</ul>
+<h3>Popular Links</h3>
+<ul>
+<li><a href="http://petshopngo.com/index.php/catalogsearch/">Top Searches</a></li>
+<li><a href="#">Shop By Brand</a></li>
+</ul></div></div><div class="persistent-grid2-1 grid12-3 omega">	<div class="section-space std"><h3>Customer Services</h3>
+<ul>
+<li><a title="Contact Us" href="http://petshopngo.com/index.php/contacts/?___SID=U">Contact Us</a></li>
+<li><a href="#">Customer Service</a></li>
+<li><a href="#">Shipping Rates &amp; Info</a></li>
+<li><a href="#">Security Policy</a></li>
+<li><a href="#">Returns &amp; Refunds</a></li>
+<li><a href="#">Affiliate Info</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+<h2>Order by Phone 713-589-6496</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Friend and Follow</h3>
+<p><a href="https://www.facebook.com/petshopngo/"><img title="Facebook" alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/fb.png" /></a> <a href=" https://twitter.com/petshopngo"><img title="Google+" alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/gplus.png" height="32" width="32" /></a> <a href=" https://plus.google.com/118364786634286157853/"><img title="Linkedin" alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/in.png" /></a> <a href="https://www.youtube.com/channel/UCkdD2Xbb7NBpyMYynRV7RgA"><img title="Tweet" alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/tw_1.png" /></a><a href=" https://www.linkedin.com/in/pet-shop-go-7714a1123"><img title="Youtube" alt="" src="http://petshopngo.com/media/wysiwyg/cmsmart/petstore/youtube.png" /></a></p>
+<p>&nbsp;</p></div></div>                </div> <!-- end: footer-primary section -->
+                
+                <div class="footer-primary-bottom section section-space">
+                    <div class="footer-primary-inner clearer">
+
+                        	<div class="item float-left clearer block_footer_primary_bottom>
+                        	                       			<ul class="links">
+                        <li class="first" ><a href="http://petshopngo.com/index.php/catalog/seo_sitemap/category/?___SID=U" title="Site Map" >Site Map</a></li>
+                                <li ><a href="http://petshopngo.com/index.php/catalogsearch/term/popular/?___SID=U" title="Search Terms" >Search Terms</a></li>
+                                <li ><a href="http://petshopngo.com/index.php/catalogsearch/advanced/?___SID=U" title="Advanced Search" >Advanced Search</a></li>
+                                <li ><a href="http://petshopngo.com/index.php/sales/guest/form/?___SID=U" title="Orders and Returns" >Orders and Returns</a></li>
+                                <li class=" last" ><a href="http://petshopngo.com/index.php/contacts/?___SID=U" title="Contact Us" >Contact Us</a></li>
+            </ul>
+                    		                        	</div>
+          
+                        
+                                                    <div class="item float-right clearer">
+                                                            </div>
+                                                
+                    </div> 
+                </div> <!-- end: footer-primary-bottom -->
+            
+            </div> <!-- end: grid-full -->
+        </div> <!-- end: footer-primary -->
+    </div>
+
+    <div class="footer-bottom-container section-container">
+        <div class="footer-bottom footer container">
+            <div class="grid-full-copyright">
+
+                <div class="section clearer">
+                
+                	<div class="item float-left">
+                    	<p class="footer-copyright"><p >CopyRight &copy; All rights reserved By  <a href="#" title="Toner Here">Petshopngo</a>. Powered by <a href="http://www.desss.com/" title="DESSS APPLYING TECHNOLOGIES" target="_blank">Desss Inc</a> - <a href="http://www.webdesignerhouston.us" title="Web Design Houston " target="_blank">Web Design Houston </a></p>
+</p>
+                    	<span class="magento-cms" style="display:none;"><a href="http://magento-themes.cmsmart.net/magento-themes"> Magento Themes </a>design by cmsmart. <a href="http://magento-themes.cmsmart.net/magento-themes"> Magento Themes </a> & <a href="http://magento-extensions.cmsmart.net/magento-extensions"> Magento Extensions </a></span>
+                    </div>
+                    
+                                        
+                                        
+                    
+                </div> <!-- end: footer-bottom section -->
+
+            </div> <!-- end: grid-full -->
+        </div> <!-- end: footer-bottom -->
+    </div>
+    
+    <a href="#top" id="scroll-to-top">To top</a>
+
+</div> <!-- end: footer-container -->
+
+
+<script type="text/javascript">
+
+			function setGridItemsEqualHeight($)
+	{
+		var SPACING = 20;
+		if ($(window).width() >= 480)
+		{
+			$('.category-products-grid').removeClass("auto-height");
+			
+			var gridItemMaxHeight = 0;
+			$('.category-products-grid > .item').each(function() {
+				$(this).css("height", "auto");
+				
+				////////////////////////////////////////////////////////////////
+									var actionsHeight = $(this).find('.actions').height();
+					$(this).css("padding-bottom", (actionsHeight + SPACING) + "px"); //Set new padding
+								////////////////////////////////////////////////////////////////
+				
+				gridItemMaxHeight = Math.max(gridItemMaxHeight, $(this).height());
+			});
+			
+			//Apply max height
+			$('.category-products-grid > .item').css("height", gridItemMaxHeight + "px");
+		}
+		else
+		{
+			$('.category-products-grid').addClass("auto-height");
+			$('.category-products-grid > .item').css("height", "auto");
+			$('.category-products-grid > .item').css("padding-bottom", "20px");
+		}
+	}
+		
+		function activateMobileMenu($)
+	{
+		if ($(window).width() < 960)
+		{
+			$('#mobnav').show();
+			$('.vertnav-top').addClass('mobile');
+			$('#nav').addClass('mobile');
+		}
+		else
+		{
+			$('#nav').removeClass('mobile');
+			$('.vertnav-top').removeClass('mobile');
+			$('#mobnav').hide();
+		}
+	}
+	
+	
+
+	jQuery(function($) {
+
+				activateMobileMenu(jQuery);
+		
+				$('#mobnav-trigger').toggle(function() {
+			$(this).addClass('active');
+			$('.vertnav-top').addClass('show');
+		}, function() {
+			$(this).removeClass('active');
+			$('.vertnav-top').removeClass('show');
+		});
+
+				$("#nav > li").hover(function() {
+			$(this).find(".level0").stop(true, true).delay(150).fadeIn(300, "easeOutCubic");
+		}, function() {
+			$(this).find(".level0").stop(true, true).delay(150).fadeOut(300, "easeInCubic");
+		});
+		
+				$("#mini-cart").hover(function() {
+			$(this).addClass('hover');
+			$("#mini-cart .block-content").stop(true, true).delay(300).fadeIn(500, "easeOutCubic");
+		}, function() {
+			$("#mini-cart .block-content").stop(true, true).delay(300).fadeOut(500, "easeInCubic");
+		});
+		
+				$(".dropdown-button").mouseenter(function() {
+			$(this).click();
+		});
+		$(".dropdown-button").click(function() {
+			$(this).addClass('hover');
+			var el = $(this).find("ul");
+			if ($(window).width() >= 480)
+				el.stop(true, true).delay(300).fadeIn(500, "easeOutCubic");
+			else
+				el.show();
+
+			//Positionning
+			var x = el.offset().left;
+			if (x < 0)
+			{
+				var space = $(this).offset().left;
+				el.css("left", (-1)*space);
+				el.css("right", "auto");
+			}
+		}).mouseleave(function() {			
+			var el = $(this).find("ul");
+			if ($(window).width() >= 480)
+				el.stop(true, true).delay(300).fadeOut(500, "easeInCubic");
+			else
+				el.hide();
+			el.css("left", "");
+			el.css("right", "");
+		});
+		
+				$(window).scroll(function(){
+			if ($(this).scrollTop() > 100)
+			{
+				$('#scroll-to-top').fadeIn();
+			}
+			else
+			{
+				$('#scroll-to-top').fadeOut();
+			}
+		});
+		$('#scroll-to-top').click(function(){
+			$("html, body").animate({scrollTop: 0}, 600, "easeOutCubic");
+			return false;
+		});
+		
+		
+						
+			var startHeight;
+			var bpad;
+			$('.category-products-grid > .item').hover(function() {
+
+				startHeight = $(this).height();
+				$(this).css("height", "auto"); //Release height
+				$(this).find(".display-onhover").fadeIn(400, "easeInCubic"); //Show elements visible on hover
+				var h2 = $(this).height();
+				
+								////////////////////////////////////////////////////////////////
+				var addtocartHeight = 0;
+				var addtolinksHeight = 0;
+				
+								
+									var addtolinksEl = $(this).find('.add-to-links');
+					if (addtolinksEl.hasClass("addto-onimage") == false)
+						addtolinksHeight = addtolinksEl.height();
+								
+									var h3 = h2 + addtocartHeight + addtolinksHeight;
+					var diff = 0;
+					if (h3 < startHeight)
+					{
+						$(this).height(startHeight);
+					}
+					else
+					{
+						$(this).height(h3); 						diff = h3 - startHeight;
+					}
+								////////////////////////////////////////////////////////////////
+
+				$(this).css("margin-bottom", "-" + diff + "px"); 				
+			}, function() {
+				
+				//Clean up
+				$(this).find(".display-onhover").hide();
+				$(this).css("margin-bottom", "");
+
+													$(this).height(startHeight);
+								
+			});
+		
+				
+		
+		/* On resize */
+		var t;
+		$(window).resize(function() {
+			clearTimeout(t);
+			t = setTimeout(function() {
+
+													setGridItemsEqualHeight($);
+								
+								$('.itemslider').each(function(index){
+					var s = $(this).data('flexslider');
+					if (s != null) s.flexAnimate(0);
+				});
+				
+								activateMobileMenu($);
+				
+			}, 100);
+		});
+
+	}); /* end: jQuery(){...} */
+	
+	
+	
+	jQuery(window).load(function(){
+		
+							setGridItemsEqualHeight(jQuery);
+		
+	}); /* end: jQuery(window).load(){...} */
+	
+</script>

@@ -1,0 +1,57 @@
+
+
+<div class="Sale-category">
+<div id="wrap">
+  <ul id="mycarousel" class="jcarousel-skin-tango">
+<?php
+$_category = Mage::registry('current_category');
+if($_category) {
+	$id = $_category->getId();
+	$categoryc = Mage::getModel('catalog/category')->load($id);
+	$subcategories = explode(',', $categoryc->getChildren());
+	
+	foreach ($subcategories as $id){
+		$category = Mage::getModel('catalog/category')->load($id);
+		$img = Mage::getModel('catalog/category')->load($category->getId())->getThumbnail();
+	
+		echo '<li class="category-item"><a href="' .$category->getUrl(). '"><img src="'. Mage::getBaseUrl('media').'catalog/category/'. $img . '" width="174"; height="140";/>' ;
+		echo '<div class="title-cate"><h2>'.$category->getName().'</h2></div>' ;
+		echo '</a>';
+		echo '<a class="cate-view-all" href="' .$category->getUrl(). '">View All Category</a></li>';		
+				
+	}
+}
+?>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+
+function mycarousel_initCallback(carousel)
+{
+    // Disable autoscrolling if the user clicks the prev or next button.
+    carousel.buttonNext.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    carousel.buttonPrev.bind('click', function() {
+        carousel.startAuto(0);
+    });
+
+    // Pause autoscrolling if the user moves with the cursor over the clip.
+    carousel.clip.hover(function() {
+        carousel.stopAuto();
+    }, function() {
+        carousel.startAuto();
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('#mycarousel').jcarousel({
+        auto:20,
+        wrap: 'last',
+        initCallback: mycarousel_initCallback
+    });			jQuery('li.jcarousel-item').hover(	  function () {		jQuery(this).find('.title-cate').css('display','block').animate({marginBottom:'0px'},200);	  },	  function () {		jQuery(this).find('.title-cate').css('display','none').animate({marginBottom:'-33px'},200);	  }	);
+});
+
+</script>

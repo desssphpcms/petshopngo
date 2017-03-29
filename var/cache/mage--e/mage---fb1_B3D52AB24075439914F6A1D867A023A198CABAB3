@@ -1,0 +1,60 @@
+<div class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span>Browse By</span></strong>
+    </div>
+    <div class="block-content">
+        <dl id="narrow-by-list2">
+            <dt>Category</dt>
+            <dd>
+                <ol>
+                                                        <li>
+                        <a href="http://petshopngo.com/index.php/cats/toys?___SID=U">Toys</a> (40)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/litter-boxes?___SID=U">Litter Boxes</a> (15)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/beds?___SID=U">Beds</a> (74)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/furniture?___SID=U">Furniture</a> (41)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/travel?___SID=U">Travel</a> (15)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/waste-management?___SID=U">Waste Management</a> (1)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/containment?___SID=U">Containment</a> (4)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/feeding-and-watering?___SID=U">Feeding and Watering</a> (3)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/doors?___SID=U">Doors</a> (7)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/containment-systems?___SID=U">Containment Systems</a> (1)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/containment-systemss?___SID=U">Containment Systemss</a> (2)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/flea-and-tick?___SID=U">Flea and Tick</a> (6)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/pet-video-camera?___SID=U">Pet Video Camera</a> (1)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/house?___SID=U">House</a> (6)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/cats/treats?___SID=U">Treats</a> (0)
+                    </li>
+                                                    </ol>
+            </dd>
+        </dl>
+        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
+    </div>
+</div>

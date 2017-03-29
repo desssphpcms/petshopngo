@@ -1,0 +1,790 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <themesetting translate="label" module="themesetting">
+            <label>Petstore Theme </label>
+            <sort_order>150</sort_order>
+			<class>themesetting</class>
+        </themesetting>
+    </tabs>
+    <sections>
+        <themesetting translate="label" module="themesetting">
+			<label>Theme Settings</label>
+			<tab>themesetting</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+            <groups>
+				<cmsmart translate="label">
+                    <label>License</label>                  
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[<p id="license-messages"></p>]]>
+                    <![CDATA[
+                    <h5 style="padding-bottom: 10px; font-family: Arial">MAGENTO PETSTORE THEME</h5>
+                   	
+                    <div style="padding-bottom: 10px"><p style="float: left; width: 205px">Version</p><p>2.0.0</p></div>
+                    <div style="padding-bottom: 10px"><p style="float: left; width: 205px">License</p><p>GPL</p></div>
+                    <div><p style="float: left; width: 205px">Copyright</p><p>(c) 2013-2014 Cmsmart.net</p></div>
+                    ]]>  
+                    </comment>
+                    <fields>
+                    	
+                        <license_skuproduct_pet translate="label comment">
+                            <label>Sku Product</label>
+                            <frontend_type>hidden</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><your_first_field_name>1</your_first_field_name></depends>
+                        </license_skuproduct_pet>     
+                        <license_key translate="label comment">
+                            <label>License</label>
+                            <comment>
+                            <![CDATA[Please fill the license key, more information on <a href="http://cmsmart.net/license" target="_blank" style='text-decoration: none'><font color="#218bca">http://cmsmart.net/license</font></a>]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </license_key> 
+                        <license_domain translate="label comment">
+                            <label>Domain</label>
+                            <comment>
+                            <![CDATA[Example: <a href="#" target="_blank" style='text-decoration: none'><font color="#218bca">http://www.abc.com</font></a> or <a href="#" target="_blank" style='text-decoration: none'><font color="#218bca">http://www.sub.abc.com</font></a>]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </license_domain> 
+                        
+                        <license_info translate="label comment">
+                        	<comment>
+                        	test
+                        	</comment>
+                        	<frontend_type>text</frontend_type>
+                            <sort_order>400</sort_order>
+                            
+                        </license_info> 
+
+                    </fields>
+                </cmsmart>
+			
+			
+                <general translate="label">
+                	<label>General</label>
+                	<frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<logo translate="label comment">					      
+                    	<label>Logo</label>		
+                    	<comment>Allowed file types: jpeg, gif, png. size: 1202px x 147px.</comment>
+                    			<frontend_type>image</frontend_type>
+                    			<backend_model>adminhtml/system_config_backend_image</backend_model>
+                    			<upload_dir config="system/filesystem/media" scope_info="1">nbimages</upload_dir>
+                    			<base_url type="media" scope_info="1">nbimages</base_url>
+                    			<sort_order>1</sort_order>	
+								<show_in_default>1</show_in_default>	
+								<show_in_website>1</show_in_website>
+								<show_in_store>1</show_in_store>
+						</logo>
+						<logoalt translate="label">
+								<label>Logo Alt</label>
+								<comment>Add alt for image logo</comment> 
+								<frontend_type>text</frontend_type> 
+								<sort_order>2</sort_order> 
+								<show_in_default>1</show_in_default>  
+								<show_in_website>1</show_in_website>   
+								<show_in_store>1</show_in_store> 
+						</logoalt>           
+						                    
+            		</fields>
+                </general>
+				<mainmenu translate="label">
+                    <label>Main Menu</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<home translate="label">
+                            <label>Show Home Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </home>
+						<!--<home_img translate="label">
+                            <label>Image as Home Link</label>
+							<comment>"Show Home Link" has to be set to "yes".</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </home_img>-->
+						
+						<custom_block_floating translate="label">
+                            <label>Custom Block - Align Right</label>
+							<comment>
+								<![CDATA[To add custom block to the main menu you need to create a static block with ID <strong>block_header_nav_dropdown</strong>. Content of that static block will be displayed in the drop-down box. ]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_block_floating>
+						
+						<standard_menu translate="label">
+							<label>Enable Classic Drop-Down Menu Style</label>
+							<comment>
+								<![CDATA[<strong>Important</strong>: Do not enable both styles at a time!]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</standard_menu>
+						<wide_menu translate="label">
+							<label>Enable Wide Menu Style</label>
+							<comment>
+								<![CDATA[<strong>Important</strong>: Do not enable both styles at a time!]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</wide_menu>
+						<level2_column_count translate="label">
+							<label>Number of Columns</label>
+							<comment>Number of columns with links: second level category as a column heading and a list of third level categories.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>themesetting/system_config_source_nav_columncount</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+								<wide_menu>1</wide_menu>
+							</depends>
+						</level2_column_count>
+						<thumbnail_category translate="label">
+                            <label>Show thumbnail category</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>121</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumbnail_category>
+						<!--
+						<links_custom_link_enabled translate="label">
+                            <label>Show Custom Link</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links_custom_link_enabled>
+						<links_custom_link_path translate="label">
+                            <label>Custom Link Target Path</label>
+							<comment>Path is relative to the store root. No leading or trailing slashes.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links_custom_link_path>
+						<links_custom_link_anchor translate="label">
+                            <label>Custom Link Anchor Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links_custom_link_anchor>
+						<links_custom_link_title translate="label">
+                            <label>Custom Link Title Text</label>
+							<comment>Additional text displayed on hover.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links_custom_link_title>-->
+					</fields>
+				</mainmenu>
+				
+				<category_grid translate="label">
+                    <label>Category View (Grid Mode)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <column_count translate="label">
+							<label>Number of Columns</label>
+							<comment>
+								<![CDATA[Number of products displayed in a single row, if the <strong>Maximum Page Width</strong> is set to 1024 px. If the <strong>Maximum Page Width</strong> is larger, the number of columns will be automatically increased to show more products in a row. For example: if the <strong>Number of Columns</strong> = 3 and the <strong>Maximum Page Width</strong> = 1280 px, on wide screens you will see 4 products in a row.]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>themesetting/system_config_source_category_grid_columncount</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</column_count>
+						<equal_height translate="label">
+							<label>Equal Height of Grid Items (Products)</label>
+							<comment>If enabled, all grid items have the same height and "Add to cart" button is displayed at the bottom edge of the item.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</equal_height>
+						<hover_effect translate="label">
+							<label>Product Hover Effect</label>
+							<comment>
+								<![CDATA[Effect is visible on mouse hover over the product. <strong style="color:red;">Important:</strong> enable in order to use "Display On Hover" in <strong>Display Selected Elements</strong>.]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</hover_effect>
+						
+						<heading_display translate="label">
+							<label>Display Selected Elements</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_display>
+						
+						<display_rating translate="label">
+							<label>Ratings</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>themesetting/system_config_source_element_display</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</display_rating>
+						<display_addtocart translate="label">
+							<label>Add To Cart</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>themesetting/system_config_source_element_display</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</display_addtocart>
+						<display_addtolinks translate="label">
+							<label>"Add to" Links</label>
+							<comment>"Add to wishlist" and "Add to compare" links.</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>themesetting/system_config_source_element_display</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</display_addtolinks>
+						<addtolinks_simple translate="label">
+                            <label>Show "Add to" Links as Icons Above the Image</label>
+							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </addtolinks_simple>
+					</fields>
+				</category_grid>
+				<category_list translate="label">
+                    <label>Category View (List Mode)</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>120</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<hover_effect translate="label">
+							<label>Product Hover Effect</label>
+							<comment>Effect is visible on mouse hover over the product.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</hover_effect>
+						<addtolinks_simple translate="label">
+                            <label>Show "Add to" Links as Icons</label>
+							<comment>If set to "No", "Add to wishlist" and "Add to compare" links will be displayed as text links.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </addtolinks_simple>
+					</fields>
+				</category_list>
+				<!--
+				<sidebar translate="label">
+                    <label>Left Sidebar</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>130</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+					</fields>
+				</sidebar>
+				-->
+				<product_page translate="label">
+                    <label>Product Page</label>
+					<comment>
+						<![CDATA[<strong>IMPORTANT:</strong><br/>Width of the product page columns (<strong>Image Column</strong>, <strong>Primary Column</strong>, <strong>Secondary Column</strong>) is specified in grid units. Sum of all columns has to be <strong>equal 12 grid units</strong>. Otherwise default values will be used.<br/><br/>]]>
+					</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<image_column translate="label">
+							<label>Image Column Width</label>
+							<comment>Specify value in grid units (between 4 and 6).</comment>
+                            <frontend_type>text</frontend_type>
+							<backend_model>themesetting/system_config_backend_productpage_imgcolunits</backend_model>
+							<validate>validate-number validate-number-range number-range-4-6</validate>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</image_column>
+						<primary_column translate="label">
+							<label>Primary Column Width</label>
+							<comment>Specify value in grid units (between 3 and 8).</comment>
+                            <frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-3-8</validate>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</primary_column>
+                        <secondary_column translate="label">
+							<label>Secondary Column Width</label>
+							<comment>Specify value in grid units (between 2 and 6). Leave empty to remove this column.</comment>
+                            <frontend_type>text</frontend_type>
+							<validate>validate-number validate-number-range number-range-2-6</validate>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</secondary_column>
+						
+						<replace_related translate="label">
+							<label>Related Products</label>
+							<comment>
+								<![CDATA[To replace Related Products first enable static block with ID <strong>block_product_replace_related</strong>]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>themesetting/system_config_source_replacewithblock</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</replace_related>
+						<replace_upsell translate="label">
+							<label>Up-sell Products</label>
+							<comment>
+								<![CDATA[To replace Up-sell Products first enable static block with ID <strong>block_product_replace_upsell</strong>]]>
+							</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>themesetting/system_config_source_replacewithblock</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</replace_upsell>
+					</fields>
+				</product_page>
+				<product_labels translate="label">
+                    <label>Product Labels</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>220</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <new translate="label">
+							<label>Show "New" Label</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</new>
+						<sale translate="label">
+							<label>Show "Sale" Label</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</sale>
+					</fields>
+				</product_labels>
+				<footer translate="label">
+                    <label>Footer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<links_column_auto_width translate="label">
+							<label>Automatic Column Width Calculation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</links_column_auto_width>
+					</fields>
+				</footer>
+				<product_slider translate="label">
+                    <label>Product Sliders</label>
+					<comment>This section is related to product sliders. "Speed" will be applied for all existing product sliders, also on product page. Other settings are only applied to Featured Products Slider blocks and New Products blocks.</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>400</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<timeout translate="label">
+                            <label>Timeout</label>
+							<comment>To enable automatic scrolling of the product sliders, specify time (in milliseconds) between slide transitions. Leave empty to disable automatic scrolling. Note that 1000 miliseconds = 1 second.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timeout>
+						<speed translate="label">
+                            <label>Speed</label>
+							<comment>Duration (in milliseconds) of scrolling animation.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </speed>
+						<move_items translate="label">
+                            <label>Move Items</label>
+							<comment>Number of items that should move on animation. Enter 0 to move all visible items.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </move_items>
+					</fields>
+				</product_slider>
+				<magento_blocks translate="label">
+                    <label>Default Magento Blocks</label>
+					<comment>In this section you can disable default Magento blocks.</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>410</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<top_links translate="label">
+							<label>Top Links</label>
+							<comment>Links in the header: Accoun, Wishlist, Log In etc.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</top_links>
+						<footer_links translate="label">
+							<label>Footer Links</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_links>
+						<footer_newsletter translate="label">
+							<label>Newsletter Subscribe Form</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</footer_newsletter>
+						<!--<related_products_checkbox translate="label">
+							<label>Product Page - Related Product Checkbox</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>300</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</related_products_checkbox>-->
+					</fields>
+				</magento_blocks>
+				<sidebar_blocks_home translate="label">
+                    <label>Disable Sidebar Blocks (On Home Page)</label>
+					<comment>In this section you can disable blocks which are displayed in sidebars. These setting only affect the home page.</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>420</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<heading_left translate="label">
+							<label>Left Sidebar</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_left>
+						
+						<compare translate="label">
+							<label>Disable: Compare</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</compare>
+						<compared translate="label">
+							<label>Disable: Compared Products</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</compared>
+						<viewed translate="label">
+							<label>Disable: Viewed Products</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</viewed>
+						<wishlist translate="label">
+							<label>Disable: Wishlist</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</wishlist>
+						<poll translate="label">
+							<label>Disable: Poll</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</poll>
+						<tags translate="label">
+							<label>Disable: Tags</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</tags>
+						<paypal translate="label">
+							<label>Disable: Paypal</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</paypal>
+						<block_left_top translate="label">
+							<label>Disable: Static Block 'block_left_top'</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</block_left_top>
+						<block_left_bottom translate="label">
+							<label>Disable: Static Block 'block_left_bottom'</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</block_left_bottom>
+						
+						<heading_right translate="label">
+							<label>Right Sidebar</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_right>
+						
+						<block_right_top translate="label">
+							<label>Disable: Static Block 'block_right_top'</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>210</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</block_right_top>
+						<block_right_bottom translate="label">
+							<label>Disable: Static Block 'block_right_bottom'</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</block_right_bottom>
+					</fields>
+				</sidebar_blocks_home>
+				<install translate="label">
+                    <label>Theme Installation</label>
+					<comment>
+						<![CDATA[<strong>IMPORTANT</strong>: To change value of <strong>Overwrite Existing Blocks</strong>, select <em>Yes</em> or <em>No</em> and then save the configuration.<br/>Without saving, the option will remain unchanged after you refresh the page.]]>
+					</comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>900</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<heading_import translate="label">
+							<label>Import</label>
+							<frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</heading_import>
+						
+						<import_blocks translate="label">
+                            <label>Static Blocks</label>
+							<comment>
+								<![CDATA[Click this button to create all static blocks provided with this theme.]]>
+							</comment>
+                            <frontend_type>button</frontend_type>
+							<frontend_model>themesetting/adminhtml_button_import_cms</frontend_model>
+							<process>blocks</process>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </import_blocks>
+						<overwrite_blocks translate="label">
+                            <label>Overwrite Existing Blocks</label>
+							<comment>If set to "Yes", imported blocks will overwrite existing blocks with the same identifiers.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </overwrite_blocks>
+						
+						<import_pages translate="label">
+                            <label>Pages</label>
+							<comment>
+								<![CDATA[Click this button to create CMS pages provided with this theme.]]>
+							</comment>
+                            <frontend_type>button</frontend_type>
+							<frontend_model>themesetting/adminhtml_button_import_cms</frontend_model>
+							<process>pages</process>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </import_pages>
+						<overwrite_pages translate="label">
+                            <label>Overwrite Existing Pages</label>
+							<comment>If set to "Yes", imported pages will overwrite existing pages with the same identifiers.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </overwrite_pages>
+					</fields>
+				</install>
+				<info translate="label">
+                    <label>Cmsmart</label>
+                    <frontend_type>text</frontend_type> 
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+					<sort_order>999999</sort_order>
+                    <comment>Petstore Theme design  powered by <![CDATA[<a href="http://www.cmsmart.net" target="_blank" style='text-decoration: none'><font color="#EF1313">CMSMART</font></a>.<br/><br/>]]>Visit our website: <![CDATA[<a href="http://www.cmsmart.net" target="_blank" style='text-decoration: none'><font color="#EF1313">wwww.cmsmart.net</font></a>]]> to view more themes and extension required for your magento store.<![CDATA[<br/><br/>]]> Write ticket and get support from our at: <![CDATA[<a href="http://cmsmart.net/support" target="_blank" style='text-decoration: none'><font color="#EF1313">Technical Support - Forum</font></a>.]]>  </comment>  
+                </info>
+            </groups>
+        </themesetting>
+        
+        
+        
+    </sections>
+</config> 

@@ -1,0 +1,191 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php	
+	$theme = $this->helper('themesetting');
+	$c = $theme->getDesignCfgSection();
+	
+	$headerCss = array();
+	if ($c['header']['inner_bg_color'] && $c['header']['inner_bg_color'] != 'transparent')
+		$headerCss[] = 'show-bg';
+	else
+		if ($c['nav']['stretched'])
+			$headerCss[] = 'stretched';
+?>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {    
+		/*
+		$('.level0 li.item').each(function() {        
+			if($(this).html().length == 0)        
+			{            
+				$(this).remove();        
+			}    
+		});
+		*/
+		//alert('test');
+		//$('ul.level0 li:empty').remove();
+		/*
+		$('li.level0').hover(function(){
+			alert('test');
+			$('ul.level0').find('li').each(function(){
+				
+				if($(this).is(':empty'))
+					$(this).remove();
+			});
+		});
+		*/
+		/*
+		$('ul.level0 li').filter(function() 
+		{
+			return $(this).text()​​​​​​​ == '';
+		}).remove();
+		*/
+		//$('.level-top').hover(function(){
+			//alert('test');
+			//$(this).prev().find('li:empty').remove();
+				//if($(this).is(':empty'))
+				//$(this).remove();
+			//});
+			//$('li:empty').css('display','none !important');
+			//$('.level0 li.item').each(function() {
+				
+				//if($(this).text() === '')
+				//{
+					//alert('test');
+					//$(this).remove();
+				//}	
+			//});
+		//});
+		//alert('test');
+		//$('ul.level0 li:empty').css('display','none !important');
+		$('ul.level0 li.item').each(function() {
+				
+				if($(this).text() === ' ')
+				{
+					//alert('test');
+					$(this).remove();
+				}	
+		});
+		
+	});   
+</script>
+<link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
+<div class="header-container" id="top">
+
+    <div class="head-container<?php if($headerCss) echo " " . implode(" ", $headerCss); ?>">
+    	
+    	 <?php  echo $this->getChildHtml('banner-header'); ?>
+    	<div class="header-top clearer">
+        
+    		<!-- menu top -->
+    		  <?php  echo $this->getChildHtml('store_language'); ?>
+    		 <?php  echo $this->getChildHtml('currency'); ?>
+            <?php
+		            //Default Magento top links (page.xml)
+		            if ($theme->getCfg('magento_blocks/top_links'))
+		            	echo $this->getChildHtml('topLinks');
+            ?>
+            <!-- end menu top -->
+            <?php if ($tmp = $this->getChildHtml('block_header_top_left')): ?>
+            	<div class="block_header_top_left item item-left"><?php echo $tmp; ?></div>
+            <?php endif; ?>
+            <?php if ($tmp = $this->getChildHtml('block_header_links_upper')): ?>
+            	<div class="block_header_links_upper item item-left"><?php echo $tmp; ?></div>
+            <?php endif; ?>
+            <?php if ($tmp = $this->getChildHtml('block_header_top_right')): ?>
+            	<div class="block_header_top_right item item-right"><?php echo $tmp; ?></div>
+            <?php endif; ?>
+            
+        </div>
+        <?php echo $this->getChildHtml('topContainer'); ?>
+        
+		<div class="header-main v v3">
+        	<div class="logo-wrapper">
+				<?php 
+			   $alt=Mage::getStoreConfig('themesetting/general/logoalt');
+			   if(!$alt)
+			    $alt=$this->getLogoAlt();
+			   $imglogo=Mage::getStoreConfig('themesetting/general/logo');
+			   ?>
+			    
+			   <?php 
+			   if ($this->getIsHomePage()):
+			   ?>
+                <h1 class="logo">
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $alt ?>" >
+                <?php 
+                if($imglogo):
+                ?>
+                <img alt="<?php echo $alt;?>" src="<?php echo Mage::getBaseUrl('media') .'nbimages/'. $imglogo; ?>" width="246"/>
+                <?php else:?>
+                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $alt ?>" width="246"/>
+                <?php endif;?>
+                </a></h1>
+            	<?php else:?>
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $alt ?>" class="logo">
+                <?php 
+                if($imglogo):
+                 ?>
+                <img alt="<?php echo $alt;?>" src="<?php echo Mage::getBaseUrl('media') .'nbimages/'. $imglogo; ?>" width="246"/>
+                 <?php else:?>
+                <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $alt ?>" width="246" />
+                 <?php endif;?>
+                </a>
+            <?php endif?>
+	       </div>
+            
+           
+            
+            <div class="user-menu clearer">
+                <div id="mini-cart">
+                    <?php echo $this->getChildHtml('cart_sidebar'); ?>
+                </div>
+                <div class="after-mini-cart"></div>
+                <div class="top-links">
+                	<?php
+					
+					//Custom top links - override default Magento top links
+                    if ($tmp = $this->getChildHtml('block_header_top_links'))
+						echo $tmp;
+					?>
+                </div> <!-- end: top-links -->
+
+            </div> <!-- end: user-menu -->
+            <div class="clearer"></div>
+        </div> <!-- end: v -->
+	<div class="clearer"></div>
+    </div> <!-- end: header -->
+    <div class="main-menu-search">
+      	 <?php echo $this->getChildHtml('topMenu') ?>
+         <?php echo $this->getChildHtml('topSearch'); ?>
+   			 <div class="clearer"></div>
+    </div>
+  
+	<div class="bannercontent"><?php echo $this->getChildHtml('bannercontent') ?></div>
+</div> <!-- end: header-container -->

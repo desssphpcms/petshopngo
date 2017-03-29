@@ -1,0 +1,67 @@
+<?php
+/**
+ * Cmsmart Co.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0).
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to obtain it through the world-wide-web, please send
+ * an email to info@Cmsmart.com so we can send you a copy immediately.
+ *
+ * @category   Cmsmart
+ * @package    Cmsmart_News
+ * @copyright  Copyright (c) 2010-2012 Cmsmart Co. 
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/**
+ * template of news
+ *
+ * @category   Cmsmart
+ * @package    Cmsmart_News
+ * @author     VF 
+ */
+
+/**
+ * @var $this Cmsmart_News_Block_News
+ */
+?>
+<div class="std news_container">
+    <h1 class="news_title"><?php echo $this->__("News"); ?></h1>
+    <div class="news">
+    <?php $news = $this->getNews(); 
+    $id= Mage::app()->getRequest()->getParam('id'); 
+    ?>
+    <?php $i = 0;?>
+    <?php if ($news->count() > 0): ?>
+    <?php foreach ($news as $news): 
+    $idnews=$news->getId();
+    if($id==$idnews):
+    ?>
+	<div class="news_<?php $i++; echo (is_int($i/2) ? "r" : "l")?>">
+	    <?php if ($news->getNewsImg()): ?>
+	    <div class="news_image"><img alt="<?php echo $news->getNewsName(); ?>" src="<?php echo Mage::getBaseUrl('media'). $news->getNewsImg() ?>" /></div>
+	    <?php endif; ?>
+	    <div class="news_text"><?php echo $news->getNewsText(); ?>
+		    <h2><?php echo $news->getNewsName(); ?></h2>
+	    </div>
+	</div><?php endif;?>
+    <?php if($id==''):?>
+    <div class="news_<?php $i++; echo (is_int($i/2) ? "r" : "l")?>">
+	    <?php if ($news->getNewsImg()): ?>
+	    <div class="news_image"><img alt="<?php echo $news->getNewsName(); ?>" src="<?php echo Mage::getBaseUrl('media'). $news->getNewsImg() ?>" /></div>
+	    <?php endif; ?>
+	    <div class="news_text"><?php echo $news->getNewsText(); ?>
+		    <h2><?php echo $news->getNewsName(); ?></h2>
+	    </div>
+	</div>
+	<?php endif;?>
+    
+    <?php endforeach; ?>
+    <?php endif;?>
+    
+    
+    </div>
+</div>

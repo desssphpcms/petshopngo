@@ -1,0 +1,15 @@
+<root>
+   <pages>
+      <cms_page>
+         <title>CMSMART Home Page </title>
+         <identifier>home</identifier>
+         <content><![CDATA[
+<p>{{block type="catalog/product_new" products_count="8" block_name="New Products" hide_button="1" template="catalog/product/new.phtml" }}
+ {{block type="themesetting/product_list_featured" category_id="4" product_count="10" block_name="Featured Products" template="catalog/product/list_featured_slider.phtml" }}</p>
+]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_page>
+    
+   </pages>
+</root>

@@ -1,0 +1,36 @@
+ <?php if(count($this->getItemCollection()->getItems())): ?>
+<div class="collateral-box up-sell">
+    <h3 class="section-title "><?php echo $this->__('You might also like') ?></h3>
+    <div  class="generic-product-grid catalog-listing" id="upsell-product-table">
+    <?php //$this->setColumnCount(4); // uncomment this line if you want to have another number of columns. also can be changed in layout ?>
+    <?php //if($_item->isComposite() || !$_item->isSaleable()): ?><?php //endif; ?>
+    <?php $this->resetItemsIterator() ?>
+    <?php for($_i=0;$_i<=3;$_i++): ?>
+            <div class="item-product">
+    <?php //foreach($this->getItems() as $_item): ?>
+    <?php //var_dump($_item); exit;?>
+            <?php for($_j=0;$_j<$this->getColumnCount();$_j++): ?>
+            <?php if($_item=$this->getIterableItem()): ?>
+        
+           
+                <div class="product-image"><a href="<?php echo $_item->getProductUrl() ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(125) ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" width="125" height="125" /></a></div>
+               <div class="product-information">
+                <a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a>
+                <?php echo $this->getPriceHtml($_item, true) ?>
+                </div>
+          
+            <?php else: ?>
+          
+            <?php endif ?>
+            <?php endfor; ?>
+           
+        </div>
+        <?php endfor; ?>
+         <div class="clearer"></div>
+          </div>
+        
+        <?php //endforeach ?>
+        
+    <script type="text/javascript">decorateTable('upsell-product-table')</script>
+</div>
+<?php endif; ?> 

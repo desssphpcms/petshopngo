@@ -1,0 +1,910 @@
+<root>
+   <blocks>
+      <cms_block>
+         <title>Menu Footer Links</title>
+         <identifier>footer_links_menu</identifier>
+         <content>
+		 <![CDATA[
+			<ul>
+			<li><a href="{{store direct_url="dogs.html"}}">Dogs</a></li>
+			<li><a href="{{store direct_url="cat.html"}}">Cat</a></li>
+			<li><a href="{{store direct_url="fish.html"}}"> Fish </a></li>
+			<li><a href="{{store direct_url="animal.html"}}">Small Animal </a></li>
+			<li><a href="{{store direct_url="bird.html"}}"> Birds </a></li>
+			<li><a href="{{store direct_url="foots-center.html"}}">Food Center</a></li>
+			</ul>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+		<cms_block>
+         <title>dog</title>
+         <identifier>dog</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-clo-7_5.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Batman Symbol" title="Batman Symbol" template="catalog/product/widget/link/link_block.phtml" id_path="product/77"}} <img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-clo-4.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Ironman Bandana" title="Ironman Bandana" template="catalog/product/widget/link/link_block.phtml" id_path="product/89"}} <img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-clo-5.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Ironman Burst" title="Ironman Burst" template="catalog/product/widget/link/link_block.phtml" id_path="product/93"}}</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+      </cms_block>
+	  <cms_block>
+         <title>content banner content  top</title>
+         <identifier>block_banner_content_top</identifier>
+         <content>
+		 <![CDATA[
+			<div class="cmsmart-sale-a">
+				<h1><a href="{{store url="sale.html"}}{{store url="sale.html"}}" target="_blank">Biggest Sale Off The Year</a></h1>
+				<p>Anniversary Sale <span>~ instore &amp; online</span></p>
+				</div>
+				<div class="cmsmart-sale-b">
+				<h1><a href="{{store url="sale.html"}}" target="_blank">Save <span style="font-size: 12pt; display: inline-block; overflow: hidden;"><sup>$</sup></span>15 + Free <span>Shipping</span></a></h1>
+				<p>over $75 through Sunday with code: <strong>15June </strong><span>~ Exclusions apply</span></p>
+				</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+	</cms_block>
+	<cms_block>
+         <title>block slide1</title>
+         <identifier>block_slide1</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/slideshow/slider3.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+	<cms_block>
+         <title>block slide2</title>
+         <identifier>block_slide2</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/slideshow/slider4.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block slide 3</title>
+         <identifier>block_slide3</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/slideshow/slide2.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Home advert left</title>
+         <identifier>block_advert_left</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="{{store url="dogs.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/advert-home/banner-maintop-a-top.png"}}" alt="" /></a> <a href="{{store url="dogs/supplies-training.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/advert-home/banner-maintop-a-bottom.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Home advert middle</title>
+         <identifier>block_advert_middle</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="{{store url="cat.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/advert-home/banner2.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Home advert right</title>
+         <identifier>block_advert_right</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="{{store url="dogs/food-health.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/advert-home/banner3.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Banner bottom Home</title>
+         <identifier>banner-bottom</identifier>
+         <content>
+		 <![CDATA[
+			<div class="banner-bottom">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/banner-bottom-home/banner-extension-a.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/banner-bottom-home/banner-extension-b.png"}}" alt="" /></a></p>
+</div>
+<!--------------->
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block footer column1</title>
+         <identifier>block_footer_column1</identifier>
+         <content>
+		 <![CDATA[
+			<h3>Shopping</h3>
+<ul>
+<li><a href="{{store url="dogs.html"}}">Dog Supplies</a></li>
+<li><a href="{{store url="cat.html"}}">Cat Supplies </a></li>
+<li><a href="{{store url="fish.html"}}l">Fish Supplies</a></li>
+<li><a href="{{store url="animal.html"}}">Small Animal Supplies</a></li>
+<li><a href="{{store url="animal.html"}}">Ferret Supplies</a></li>
+<li><a href="{{store url="animal.html"}}">Reptile Supplies</a></li>
+<li><a href="{{store url="bird.html"}}">Bird Supplies</a></li>
+<li><a href="#">Pond Supplies</a></li>
+<li><a href="#">Specialty Stores</a></li>
+</ul>
+<h3>Shopping Services</h3>
+<ul>
+<li><a href="#">Repeat Delivery</a></li>
+<li><a href="#">Product Q&amp;A </a></li>
+<li><a href="#">Ratings &amp; Reviews</a></li>
+<li><a href="#">Fetch My Sales</a></li>
+<li><a title="Shopping Guides" href="{{store direct_url="shopping-guides"}}">Shopping Guides</a></li>
+<li><a href="#">Pet Birthday Club</a></li>
+</ul>
+<p><span class="border-bottom">&nbsp;</span></p>
+<h3>PayPal</h3>
+<p><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/pay.png"}}" alt="" /></a><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/ame.png"}}" alt="" /></a><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/mater.png"}}" alt="" /></a><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/vida.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block footer column2</title>
+         <identifier>block_footer_column2</identifier>
+         <content>
+		 <![CDATA[
+			<h3>My Petstore</h3>
+<ul>
+<li><a href="http://cmsmart.net/">My Account</a></li>
+<li><a href="http://cmsmart.net/">Order Status</a></li>
+<li><a href="http://cmsmart.net/">Quick Reorder</a></li>
+<li><a href="http://cmsmart.net/">My Shopping List</a></li>
+<li><a href="http://cmsmart.net/">Pals Rewards</a></li>
+</ul>
+<p><span class="border-bottom">&nbsp;</span></p>
+<p>{{block type="newsletter/subscribe" name="newsletter" as="newsletter" template="newsletter/subscribe.phtml"}}</p>
+<p><span class="border-bottom">&nbsp;</span></p>
+<div class="img-petstore"><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/img1.png"}}" alt="" /> </a><span>Gift Cards</span></div>
+<div class="img-petstore"><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/img2.png"}}" alt="" /></a> <span>Petstore Coupon</span></div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block footer column3</title>
+         <identifier>block_footer_column3</identifier>
+         <content>
+		 <![CDATA[
+			<h3>Our Store</h3>
+<ul>
+<li><a href="#">Store Locator</a></li>
+<li><a href="#">Local Ad</a></li>
+<li><a href="#">Grand Openings</a></li>
+<li><a href="#">Store Offers &amp; Events</a></li>
+<li><a href="#">Live Birds</a></li>
+<li><a href="#">Live Reptiles</a></li>
+<li><a href="#">Live Small Animals</a></li>
+</ul>
+<div class="img-petstore"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/privacy.png"}}" alt="" /></div>
+<h3>Petstore Services</h3>
+<ul>
+<li><a href="#">Dog Training</a></li>
+<li><a href="#">Grooming Salon</a></li>
+<li><a href="#">Affordable Vaccinations</a></li>
+<li><a href="#">Pooch Hotel</a></li>
+</ul>
+<h3>Popular Links</h3>
+<ul>
+<li><a href="#">Top Searches</a></li>
+<li><a href="#">Shop By Brand</a></li>
+<li><a href="#">Nutrition Center</a></li>
+</ul>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block footer column4</title>
+         <identifier>block_footer_column4</identifier>
+         <content>
+		 <![CDATA[
+			<h3>Customer Services</h3>
+<ul>
+<li><a title="Contact Us" href="{{store url="contacts"}}">Contact Us</a></li>
+<li><a href="#">Customer Service</a></li>
+<li><a href="#">Shipping Rates &amp; Info</a></li>
+<li><a href="#">Security Policy</a></li>
+<li><a href="#">Returns &amp; Refunds</a></li>
+<li><a href="#">Affiliate Info</a></li>
+<li><a href="#">Privacy Policy</a></li>
+</ul>
+<h2>Order by Phone (877) 738-6742</h2>
+<p><span class="border-bottom"></span></p>
+<h3>Petstore Kids</h3>
+<ul>
+<li><a href="#">Petstore Field Trips</a></li>
+</ul>
+<p><span class="border-bottom"></span></p>
+<h3>Friend and Follow</h3>
+<p><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/fa.png"}}" alt="" /></a> <a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/tw.png"}}" alt="" /></a> <a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/b.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/you.png"}}" alt="" /></a><a href="http://cmsmart.net/"><img src="{{media url="wysiwyg/cmsmart/petstore/icon/rss.png"}}" alt="" /></a> 
+<p><span class="border-bottom"></span></p>
+<a href="http://cmsmart.net/"> <img src="{{media url="wysiwyg/cmsmart/petstore/icon/img45.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block_footer_menu_bottom</title>
+         <identifier>block_footer_menu_bottom</identifier>
+         <content>
+		 <![CDATA[
+			<ul>
+<li><a href="#"> Terms Privacy </a></li>
+<li><a href="#"> Customer Service </a></li>
+<li><a href="#"> Site Map</a></li>
+<li><a href="#">Search Terms </a></li>
+<li><a href="#"> Advanced Search </a></li>
+<li><a href="#">Orders and Returns</a></li>
+</ul>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>view all cate  dogs-menu</title>
+         <identifier>bg-dogs-menu</identifier>
+         <content>
+		 <![CDATA[
+			<p>{{widget type="catalog/category_widget_link" anchor_text="View More Categories" title="" template="catalog/category/widget/link/link_block.phtml" id_path="category/5"}}</p>
+<p><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/banner-menu_dogs.jpg"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>cat</title>
+         <identifier>cat</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/cat-bed-85.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Whisker City" title="Whisker City" template="catalog/product/widget/link/link_block.phtml" id_path="product/189"}} <img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/cat-bed-7.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Kitty Clubhouse" title="Kitty Clubhouse" template="catalog/product/widget/link/link_block.phtml" id_path="product/187"}} <img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/cat-bed-18.jpg"}}" alt="" />{{widget type="catalog/product_widget_link" anchor_text="Precision Low Bumper" title="Precision Low Bumper" template="catalog/product/widget/link/link_block.phtml" id_path="product/188"}}</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>view all cate cat-menu</title>
+         <identifier>bg-cat-menu</identifier>
+         <content>
+		 <![CDATA[
+			<p>{{widget type="catalog/category_widget_link" anchor_text="View More Cat Categories" title="View More Cat Categories" template="catalog/category/widget/link/link_block.phtml" id_path="category/6"}} <img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/banner-menu.jpg"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Advert bird menu</title>
+         <identifier>advert-bird-menu</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="{{store url="brid/supplies.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/images-bird/banner-menu_bird.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>View all category fish</title>
+         <identifier>view-all-fish</identifier>
+         <content>
+		 <![CDATA[
+			<p>{{widget type="catalog/category_widget_link" anchor_text="View More Fish Categories" title="View More Fish Categories" template="catalog/category/widget/link/link_block.phtml" id_path="category/7"}} <a href="http://magento-themes.cmsmart.net/magento-themes"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/fish.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Custosmer Login </title>
+         <identifier>block_customer_login</identifier>
+         <content>
+		 <![CDATA[
+			<div class="customer">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/vips.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/trustwave_seal.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/cmsmart-privacy.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/norton.png"}}" alt="" /></a></p>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Contact  Us</title>
+         <identifier>contact-us</identifier>
+         <content>
+		 <![CDATA[
+			<div class="contact-us-top">
+<div class="googlemap"><iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=vi&amp;geocode=&amp;q=Maryland+Avenue,+%C4%90%E1%BA%A3o+Staten,+Ti%E1%BB%83u+bang+New+York,+Hoa+K%E1%BB%B3&amp;aq=2&amp;oq=Maryland&amp;sll=40.611763,-74.068823&amp;sspn=0.008291,0.021136&amp;g=Maryland+Avenue,+%C4%90%E1%BA%A3o+Staten,+Ti%E1%BB%83u+bang+New+York,+Hoa+K%E1%BB%B3&amp;ie=UTF8&amp;hq=&amp;hnear=Maryland+Ave,+Staten+Island,+Richmond,+New+York+10305&amp;ll=40.611763,-74.068823&amp;spn=0.008291,0.021136&amp;t=m&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="685" height="255"></iframe></div>
+<div class="address">
+<h1>Address</h1>
+<ul>
+<li><span>Stress : </span>
+<p>15 Sweet Love Stress</p>
+</li>
+<li><span>Suburb: </span>
+<p>Pyanama</p>
+</li>
+<li><span>State: </span>
+<p>Maryland</p>
+</li>
+<li><span>Zip Code: </span>
+<p>12345</p>
+</li>
+<li><span>Country: </span>
+<p>USA</p>
+</li>
+<li><span>Telephone: </span>
+<p>+321 5441600</p>
+</li>
+<li><span>Fax: </span>
+<p>+321 5441601</p>
+</li>
+<li><span>Website: </span><a href="#"> cmsmart.net</a></li>
+</ul>
+</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block category Dogs Food</title>
+         <identifier>block-dogs-food</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/block-satic-dog.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block advert details</title>
+         <identifier>block_advert_details</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner-page-product-2.jpg"}}" alt="" /> </a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner-page-product.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Faqs</title>
+         <identifier>faqs</identifier>
+         <content>
+		 <![CDATA[
+			<p><strong> Question: what if my cat ingests revolution?</strong><br /> <strong>Answer: </strong>For cats the revolution should be applied to skin directly between the shoulder blades or on the skin at the back of the head where your pet is unable to reach. If there are multiple pets who groom each other, they will need to be separated until the product is completely dry. In the even of an accidental ingestions, please contact your veterinarian right away. <strong></strong></p>
+<p><strong>Question: Does this works with dogs?</strong><br /> <strong>Answer: </strong>Revolution is available for use in dogs as Revolution canine. It is available in doses based on your dogs weight.</p>
+<p><strong>Question: What if vet has his own pharmacy? and won't let me purchase this product unless it is thru his pharmacy. I have made a copy of the prescription can I</strong><br /> <strong>Answer: </strong>We need the original prescription and cannot use a copy unless verbally authorized.<br /> If you give our customer service a call , we will be happy to give you names of veterinarians who<br />like to work with us and will happily give you a script.</p>
+<p><strong> Question: Will this help grass allergies &amp; dog licking feet?</strong><br /> <strong>Answer: </strong>My English Bull Terrier has terrible allergies and licks her feet, between her toes mostly, constantly. We started her on Omega 3 and it has helped a lot. The pills are inexpensive and worth giving a try. Hope this helps!</p>
+<p><strong> Question: It says give 1 pill to 50 lbs.</strong><br /> <strong>Answer: </strong>Since each soft gel tablet is for dogs up to 50 lbs, they could each take one tablet daily as that will fit all dogs and cats between 1-50lbs</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Sale</title>
+         <identifier>block-sale</identifier>
+         <content>
+		 <![CDATA[
+			<div class="sale-page">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/Untitled-1.png"}}" alt="" /></a></p>
+{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/catesale.phtml"}}
+<p>{{block type="catalog/product_list" name="product_list" catalog_id="95" mode="grid" template="catalog/product/listsale.phtml"}}</p>
+<div class="sale-advert-bottom"><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/img122.png"}}" alt="" /></a> <a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/imgs4.png"}}" alt="" /></a></div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block advert Sale</title>
+         <identifier>block-advert-sale</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/SupermenuCMS.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block banner  left</title>
+         <identifier>block_banner-left</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/left-img.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block checkout banner</title>
+         <identifier>block_checkout_banner</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/block_cart.png"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block banner product </title>
+         <identifier>block_banner_product</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner_product.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Sale Banner Product</title>
+         <identifier>sale-banner-product</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner_product.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Delivery</title>
+         <identifier>block_product_tab1</identifier>
+         <content>
+		 <![CDATA[
+			<p><strong>Free Next Day UK Delivery &ndash; Orders Over &pound;99</strong></p>
+<p><strong><br /></strong></p>
+<p>Place your order online before 2pm Monday to Friday and choose Next Day delivery, and we&rsquo;ll deliver your order by Parcelforce the very next working day.<br /> If your order is less than &pound;99, next day delivery costs just &pound;5.99.<br /> Available for in stock orders and to most UK mainland addresses.</p>
+<p>&nbsp;</p>
+<p><strong>Free Standard UK Delivery &ndash; Orders Over &pound;49</strong></p>
+<p><strong><br /></strong></p>
+<p>Standard Delivery normally takes 3-5 working days and your parcel will usually arrive by either Royal Mail or Parcelforce, depending on the size and weight of the order.<br /> If your order is less than &pound;49, Standard Delivery costs just &pound;3.99.<br /> We can also offer other delivery options including<br /> &bull;Next Working Day AM - &pound;7.99<br /> &bull;Saturday AM - &pound;9.99 <br />Please note, the expected delivery times above exclude Saturdays, Sundays and Bank Holidays.<br /> Large items such as Cages and some Stands are only available for delivery to UK Mainland addresses and may take an extra few days or be subject to surcharge in some areas. For more information on delivery charges and speeds to the UK and International addresses, and any restrictions, please see our full Delivery Information</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Faqs</title>
+         <identifier>block_product_tab2</identifier>
+         <content>
+		 <![CDATA[
+			<p><strong>Question: what if my cat ingests revolution?</strong></p>
+<p><br /> <strong>Answer: </strong>For cats the revolution should be applied to skin directly between the shoulder blades or on the skin at the back of the head where your pet is unable to reach. If there are multiple pets who groom each other, they will need to be separated until the product is completely dry. In the even of an accidental ingestions, please contact your veterinarian right away. <strong></strong></p>
+<p><strong><br /></strong></p>
+<p><strong><br /></strong></p>
+<p><strong>Question: Does this works with dogs?</strong></p>
+<p><br /> <strong>Answer: </strong>Revolution is available for use in dogs as Revolution canine. It is available in doses based on your dogs weight.</p>
+<p><strong><br /></strong></p>
+<p><strong><br /></strong></p>
+<p><strong>Question: What if vet has his own pharmacy? and won't let me purchase this product unless it is thru his pharmacy. I have made a copy of the prescription can I</strong></p>
+<p><br /> <strong>Answer: </strong>We need the original prescription and cannot use a copy unless verbally authorized.<br /> If you give our customer service a call , we will be happy to give you names of veterinarians who<br />like to work with us and will happily give you a script.</p>
+<p><strong><br /></strong></p>
+<p><strong><br /></strong></p>
+<p><strong>Question: Will this help grass allergies &amp; dog licking feet?</strong></p>
+<p><br /> <strong>Answer: </strong>My English Bull Terrier has terrible allergies and licks her feet, between her toes mostly, constantly. We started her on Omega 3 and it has helped a lot. The pills are inexpensive and worth giving a try. Hope this helps!</p>
+<p><strong><br /></strong></p>
+<p><strong><br /></strong></p>
+<p><strong>Question: It says give 1 pill to 50 lbs.</strong></p>
+<p><br /> <strong>Answer: </strong>Since each soft gel tablet is for dogs up to 50 lbs, they could each take one tablet daily as that will fit all dogs and cats between 1-50lbs</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Bird Image category </title>
+         <identifier>bird-image-category</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-bird/banner-category-bird.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Dogs Image category</title>
+         <identifier>dogs-image-category</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-banner.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Cat Image category</title>
+         <identifier>cat-image-category</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/banner-category1.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Fish Image category</title>
+         <identifier>fish-image-category</identifier>
+         <content>
+		 <![CDATA[
+			<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/fish-banner-categories.jpg"}}" alt="" /></a></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Shopping Guides</title>
+         <identifier>shopping-guides</identifier>
+         <content>
+		 <![CDATA[
+			<p><strong>Prless Stee</strong>l. Circulating drinking water is naturally appealing to your pet. Replaceable charcoal filter lasts for 30 days for clean and pure, healthy water. Easy cleaning, dishwasher safe. Moving water attracts pets encouraging them to drink, to stay hydrated &amp; healthy.Premium Stainless Steel. Circulating drinking water is naturally appealing to your pet. Replaceable charcoal filter lasts for 30 days for clean and pure, healthy water. Easy cleaning, dishwasher safe. Moving water attracts pets encouraging them to drink, to stay hydrated &amp; healthy Premium Stainless Steel. Circulating drinking water is naturally appealing</p>
+<p><img src="{{media url="wysiwyg/cmsmart/petstore/images/imgs4.png"}}" alt="" /></p>
+<p>to your pet. Replaceable charcoal filter lasts for 30 days for clean and pure, healthy water. Easy cleaning, dishwasher safe. Moving water attracts pets encouraging them to drink, to stay hydrated &amp; healthy.Premium Stainless Steel. Circulating drinking water is naturally appealing to your pet. Replaceable charcoal filter lasts for 30 days for clean and pure, healthy water. Easy cleaning, dishwasher safe. Moving water attracts pets encouraging them to drink, to stay hydrated &amp; healthy.Premium Stainless Steel. Circulating drinking water is naturally appealing to your pet. Replaceable charcoal filter lasts for 30 days for clean and pure, healthy water. Easy cleaning, dishwasher safe. Moving water attracts pets encouraging them to drink, to stay hydrated &amp; healthy</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>banner-header</title>
+         <identifier>banner-header</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/images/baner-top.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Dog Supplies Training </title>
+         <identifier>block-category-dog-supplies-training</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-banner-categories.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Dog Food  Health</title>
+         <identifier>block-category-dog-food-health</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-banner.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Food &amp; Health</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Cat Supplies  Training</title>
+         <identifier>block-category-cat-supplies-training</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/banner-category.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Cat Food  Health</title>
+         <identifier>block-category-cat-food-health</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/cat-banner-categories2.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Fish Supplies</title>
+         <identifier>block-category-fish-supplies</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/fish-banner-categories.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Fish Food  Care</title>
+         <identifier>block-category-fish-food-care</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/banner-category-fish.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Bird Supplies</title>
+         <identifier>block-category-bird-supplies</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/banner-category-bird.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Bird  Food  Care</title>
+         <identifier>block-category-bird-food-care</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/brid-banner-categories.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Supplies &amp;Training</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Dogs</title>
+         <identifier>block-category-dogs</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-dog/dog-banner-categories.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Dogs</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Cat</title>
+         <identifier>block-category-cat</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-cat/banner-category.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Cat</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Fish</title>
+         <identifier>block-category-fish</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/banner-category-fish.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Fish</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Bird </title>
+         <identifier>block-category-bird</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images-fish/banner-category-bird.jpg"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Bird</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="bottom-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>View all category bird</title>
+         <identifier>view-all-category-bird</identifier>
+         <content>
+		 <![CDATA[
+			<p>{{widget type="catalog/category_widget_link" anchor_text="View all category bird" title="View all category bird" template="catalog/category/widget/link/link_block.phtml" id_path="category/8"}}</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>content-view-more-dogs</title>
+         <identifier>content-view-more-dogs</identifier>
+         <content>
+		 <![CDATA[
+			<p>{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/list-level2.phtml"}}</p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Category Footer  center</title>
+         <identifier>block-category-footer-center</identifier>
+         <content>
+		 <![CDATA[
+			<div class="category-level2">
+<p><a href="#"><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner-categories.png"}}" alt="" /></a></p>
+<div class="page-title category-title">
+<h1>Welcom PetsMart</h1>
+</div>
+<div class="top-category-level2">{{block type="catalog/product_list" name="product_list"&nbsp; mode="grid" template="catalog/product/category-bestseller.phtml"}}
+<div class="video-category"><iframe src="//www.youtube.com/embed/_vx1OVLX5Rc" frameborder="0" width="230" height="130"></iframe></div>
+</div>
+<div class="middle-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/category-bestseller-item-2.phtml"}}</div>
+<div class="footer-category-level2">{{block type="catalog/product_list" name="product_list" mode="grid" template="catalog/product/cate-footercenter.phtml"}}</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block_advert_bottom</title>
+         <identifier>block_advert_bottom</identifier>
+         <content>
+		 <![CDATA[
+			<div class="advert-bottom-home">
+<p><a href="{{store url="sale.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner-extension-a.png"}}" alt="" /> </a>
+<a href="{{store url="sale.html"}}"><img src="{{media url="wysiwyg/cmsmart/petstore/images/banner-extension-b.png"}}" alt="" /></a></p>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>Block Video Fish Menu</title>
+         <identifier>block-video-fish-menu</identifier>
+         <content>
+		 <![CDATA[
+			<p><iframe src="//www.youtube.com/embed/Fph_6pLUpek" frameborder="0" width="185" height="160"></iframe></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block slide 4</title>
+         <identifier>block_slide4</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/slideshow/slider445.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block slide5</title>
+         <identifier>block_slide5</identifier>
+         <content>
+		 <![CDATA[
+			<p><img src="{{media url="wysiwyg/cmsmart/petstore/slideshow/slider6.png"}}" alt="" /></p>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+<cms_block>
+         <title>block_facebook_left</title>
+         <identifier>block_facebook_left</identifier>
+         <content>
+		 <![CDATA[
+			<div class="moduletable">
+<div class="itp-fblike-box">
+<div id="fb-root">&nbsp;</div>
+<script type="text/javascript">
+   (function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+   fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-like-box" data-href="https://www.facebook.com/PetSmart" data-width="205" data-height="315" data-show-faces="1" data-border-color="" data-stream="0" data-header="0" data-force-wall="false">&nbsp;</div>
+</div>
+</div>
+		]]></content>
+         <is_active>1</is_active>
+         <stores><item>0</item></stores>
+</cms_block>
+
+   </blocks>
+</root>

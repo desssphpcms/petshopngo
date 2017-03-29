@@ -1,0 +1,33 @@
+<div class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span>Browse By</span></strong>
+    </div>
+    <div class="block-content">
+        <dl id="narrow-by-list2">
+            <dt>Category</dt>
+            <dd>
+                <ol>
+                                                        <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/cages?___SID=U">Cages</a> (7)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/habitat?___SID=U">Habitat</a> (58)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/containment?___SID=U">Containment</a> (1)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/feeding-and-watering?___SID=U">Feeding and Watering</a> (1)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/beds?___SID=U">Beds</a> (4)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/small-pet/toys?___SID=U">Toys</a> (0)
+                    </li>
+                                                    </ol>
+            </dd>
+        </dl>
+        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
+    </div>
+</div>

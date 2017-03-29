@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <amasty translate="label" module="ambase">
+            <label><![CDATA[Shop by extention]]></label>
+            <sort_order>400</sort_order>
+        </amasty>
+    </tabs>
+	<sections>
+		
+	</sections>
+</config>

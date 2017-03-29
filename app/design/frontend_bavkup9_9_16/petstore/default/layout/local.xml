@@ -1,0 +1,659 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<layout>
+	<default>
+	
+		<reference name="head">
+
+			<!-- jQuery -->			<!--
+			<action method="addJs"><script>cmsmart/jquery/jquery-1.7.2.min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/jquery-noconflict.js</script></action>			-->
+			<action method="addJs"><script>cmsmart/jquery/jquery.jcarousel.min.js</script></action>
+	
+			<!-- jQuery plugins -->
+			<action method="addJs"><script>cmsmart/jquery/plugins/jquery.easing.1.3.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/plugins/jquery.flexslider-min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/plugins/tabs.min.js</script></action>
+			<action method="addJs"><script>cmsmart/jquery/plugins/jquery.accordion.js</script></action>
+			
+			<!-- Other JS scripts -->
+			<action ifconfig="themesetting/mainmenu/wide_menu" method="removeItem"><type>js</type><name>varien/menu.js</name><params/></action>
+			
+		</reference>
+		
+		
+		<!-- Root containers ====================================================================== -->
+		<reference name="root">
+			<action method="addBodyClass" ifconfig="themesetting_design/effects/shadow">
+				<classname>shadow</classname>
+			</action>
+			
+			<block type="core/text_list" name="preface" as="preface" translate="label">
+                <label>Page Preface</label>
+            </block>
+            <block type="core/text_list" name="adverthome" as="adverthome" translate="label">
+                <label>Page adverthome</label>    
+            </block>	
+			<block type="core/text_list" name="postscript" as="postscript" translate="label">
+                <label>Page Postscript</label>
+            </block>
+		</reference>
+		
+		
+		<!-- Remove sidebar blocks ====================================================================== -->
+		
+		<!-- Uncomment these tags to remove selected blocks -->
+		<!--
+		<remove name="right.reports.product.viewed" />
+		<remove name="left.reports.product.viewed" />
+		<remove name="catalog.compare.sidebar"/>
+		<remove name="right.reports.product.compared"/>
+		<remove name="wishlist_sidebar"/>
+		<remove name="tags_popular"/>
+		<remove name="right.poll"/>
+		<remove name="paypal.partner.right.logo"/>
+		<remove name="reorder"/>
+		-->
+		<remove name="right.permanent.callout"/>
+		<remove name="left.permanent.callout"/>
+		<remove name="product.clone_prices"/>
+		
+		
+		<!-- Right ====================================================================== -->
+		<reference name="right">
+		
+			<action method="unsetChild"><name>cart_sidebar</name></action>
+			<action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+			<action method="unsetChild"><name>right.reports.product.compared</name></action>
+			<action method="unsetChild"><name>right.reports.product.viewed</name></action>
+			<action method="unsetChild"><name>wishlist</name></action>
+			<action method="unsetChild"><name>sale.reorder.sidebar</name></action>
+			<action method="unsetChild"><name>right.poll</name></action>
+			<action method="unsetChild"><name>paypal.partner.right.logo</name></action>
+			
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_right_top" before="-">
+				<action method="setBlockId"><block_id>block_right_top</block_id></action>
+			</block>
+			
+			<block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" template="wishlist/sidebar.phtml" />
+			
+			<block type="cms/block" name="block_right_bottom" after="-">
+				<action method="setBlockId"><block_id>block_right_bottom</block_id></action>
+			</block>
+			
+		</reference>
+		
+
+		<!-- Left ====================================================================== -->
+		<reference name="left">
+			
+			<remove name="left.newsletter"/> <!-- Move newsletter to the footer -->
+			<action method="unsetChild"><name>tags_popular</name></action>
+
+			<block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+			<block type="reports/product_compared" name="right.reports.product.compared" template="reports/product_compared.phtml" />
+			<!--  <block type="reports/product_viewed" name="left.reports.product.viewed" template="reports/product_viewed.phtml" />-->
+			
+			<block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" template="wishlist/sidebar.phtml"/>
+			<block type="poll/activePoll" name="right.poll">
+                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+            </block>
+			<block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>
+			
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_left_top" before="-">
+				<action method="setBlockId"><block_id>block_left_top</block_id></action>
+			</block>
+			<block type="cms/block" name="block_left_bottom" after="-">
+				<action method="setBlockId"><block_id>block_left_bottom</block_id></action>
+			</block>
+			
+        </reference>
+		
+		
+		<!-- Header ====================================================================== -->
+		<reference name="header">
+		
+			<!-- Add mini cart to the header -->
+			<!-- IMPORTANT: new template file -->			
+			<block type="checkout/cart_sidebar" name="cart_sidebar" template="checkout/cart/mini.phtml" before="-">
+                <action method="addItemRender"><type>simple</type><block>checkout/cart_item_renderer</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>checkout/cart/sidebar/default.phtml</template></action>
+                <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+                    <label>Shopping Cart Sidebar Extra Actions</label>
+                </block>
+				
+            </block>
+			
+			<!-- Add currency switcher to the header -->
+			<block type="directory/currency" name="currency" template="directory/currency.phtml"/>
+			
+			<!--<block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+			<action ifconfig="themesetting/header/compare" method="unsetChild"><name>catalog.compare.sidebar</name></action>-->
+			
+			<!-- Custom top links - override default Magento top links -->
+			<block type="cms/block" name="block_header_top_links">
+				<action method="setBlockId"><block_id>block_header_top_links</block_id></action>
+				
+			</block>
+			
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="banner-header">
+                <action method="setBlockId"><block_id>banner-header</block_id></action>
+            </block>
+			
+			<block type="cms/block" name="block_header_top_left">
+                <action method="setBlockId"><block_id>block_header_top</block_id></action>
+            </block>
+            
+			<block type="cms/block" name="block_header_links_upper">
+				<action method="setBlockId"><block_id>block_header_links_upper</block_id></action>
+			</block>
+			<block type="cms/block" name="block_header_top_right">
+				<action method="setBlockId"><block_id>block_header_top_right</block_id></action>
+			</block>
+			<block type="core/text_list" name="bannercontent" as="bannercontent" translate="label"> 
+                <block type="cms/block" name="block_banner_content_top" before="-">
+						<action method="setBlockId"><block_id>block_banner_content_top</block_id></action>
+				</block>
+            </block>
+		</reference>
+		
+		
+		<!-- Top links (user menu) ====================================================================== -->
+		<reference name="top.links">
+					
+			<!-- Remove "checkout" and "cart" links -->
+			<remove name="checkout_cart_link" />
+			
+		</reference>
+		
+		<!-- Main menu ====================================================================== -->
+		<reference name="top.menu">
+		
+			<action method="unsetChild"><name>catalog.topnav</name></action>
+			<block type="themesetting/navigation" name="catalog.topnav.menu" template="page/html/topmenu.phtml"/>
+			
+        </reference>
+		
+		<reference name="catalog.topnav.menu">
+		
+			<block type="cms/block" name="block_header_nav_dropdown">
+				<action method="setBlockId"><block_id>block_header_nav_dropdown</block_id></action>
+			</block>
+			
+		</reference>
+		
+		
+		<!-- Add blocks to the footer ====================================================================== -->
+		<reference name="footer">
+			<!-- Menu to the footer -->
+           <block type="cms/block" name="footer_links_menu">
+                <action method="setBlockId"><block_id>footer_links_menu</block_id></action>
+            </block>
+			<!-- Custom footer links - override default Magento footer links (id: footer_links) -->
+			
+			
+			<block type="cms/block" name="block_footer_column1">
+                <action method="setBlockId"><block_id>block_footer_column1</block_id></action>
+            </block>
+			<block type="cms/block" name="block_footer_column2">
+                <action method="setBlockId"><block_id>block_footer_column2</block_id></action>
+            </block>
+			<block type="cms/block" name="block_footer_column3">
+                <action method="setBlockId"><block_id>block_footer_column3</block_id></action>
+            </block>
+			<block type="cms/block" name="block_footer_column4">
+                <action method="setBlockId"><block_id>block_footer_column4</block_id></action>
+            </block>
+			
+			<block type="cms/block" name="block_footer_menu_bottom">
+                <action method="setBlockId"><block_id>block_footer_menu_bottom</block_id></action>
+            </block>
+			
+			<block type="core/template" name="footer.additional" template="page/html/footer_additional.phtml">
+				<block type="cms/block" name="block_edgebox_right">
+					<action method="setBlockId"><block_id>block_edgebox_right</block_id></action>
+				</block>
+				<block type="cms/block" name="block_edgebox_left">
+					<action method="setBlockId"><block_id>block_edgebox_left</block_id></action>
+				</block>
+				<block type="cms/block" name="block_edgebox_bottom_right">
+					<action method="setBlockId"><block_id>block_edgebox_bottom_right</block_id></action>
+				</block>
+			</block>
+			
+		</reference>
+		
+    </default>
+	
+	<!-- 3 COLUMN PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<page_three_columns>
+	
+		<reference name="right">
+			<action method="unsetChild"><name>paypal.partner.right.logo</name></action>
+		</reference>
+		
+		<reference name="left">
+			<action method="unsetChild"><name>wishlist</name></action>
+		</reference>
+	
+	</page_three_columns>
+	
+	
+	<!-- USER LOGGED IN/OUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_logged_out>
+		
+		
+	</customer_logged_out>
+	
+
+	<!-- PRODUCT VIEW %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<catalog_product_view>
+	
+		<!-- Change default template for product view. IMPORTANT: same as 'review_product_list'. -->
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+	
+		<reference name="product.info">
+		<block type="catalog/product_list_related" name="catalog.product.related" template="catalog/product/list/related.phtml"/>
+			<!-- <block type="catalog/product_list_related" name="catalog.product.related"  product_count="5"  before="-" template="catalog/product/list/related.phtml"  /> -->
+			<block type="cms/block" name="block_advert_details">
+				<action method="setBlockId"><block_id>block_advert_details</block_id></action>
+			</block>	
+			
+			<!-- Change review summary template: removed links to review page. IMPORTANT: new template file. -->
+			<action method="addReviewSummaryTemplate"><type>default</type><template>review/helper/summary_nolinks.phtml</template></action>
+			<!-- Add tabs -->
+			<block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml" >
+				<action method="addTab" translate="title" module="catalog"><alias>description</alias><title>Description</title><block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template></action>
+				<action method="addTab" translate="title" module="catalog"><alias>delivery</alias><title>delivery</title>
+				<!--
+				<block>catalog/product_view_description</block><template>catalog/product/view/description.phtml</template>
+				-->
+					<block type="cms/block" name="block_product_tab1">
+						<action method="setBlockId"><block_id>block_product_tab1</block_id></action>
+					</block>
+				</action>
+				<action method="addTab" translate="title" module="catalog"><alias>tabreviews</alias><title>Reviews</title><block>review/product_view_list</block><template>review/product/view/list.phtml</template></action>
+				
+				<action method="addTab" translate="title" module="catalog"><alias>Faqs</alias><title>Faqs</title>
+				
+				<block type="cms/block" name="block_product_tab2">
+					<action method="setBlockId"><block_id>block_product_tab2</block_id></action>
+				</block>
+				
+				</action>
+			   
+				<!-- Add custom tabs -->				
+				<block type="cms/block" name="block_product_tab1">
+					<action method="setBlockId"><block_id>block_product_tab1</block_id></action>
+				</block>
+				<block type="cms/block" name="block_product_tab2">
+					<action method="setBlockId"><block_id>block_product_tab2</block_id></action>
+				</block>
+			</block>
+			<!-- end: Add tabs -->
+			
+			<!-- Up-sells: set columns count and max number of displayed items -->
+			
+
+			<block type="reports/product_viewed" name="left.reports.product.viewed" template="catalog/product/product_viewed.phtml" />
+		</reference> <!-- end: product.info -->
+		
+		<reference name="right">
+		
+		 
+			<!-- <action method="setColumnCount"><columns>1</columns></action> -->
+			 <!--  <action method="setItemLimit"><type>related</type><limit>3</limit></action> -->
+				
+		</reference>
+		<!-- Second part of adding reviews to tabs. See the first part in product.info section in info_tabs block -->
+		<reference name="tabreviews">
+			<block type="review/form" name="product.review.form" as="review_form">
+				<block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
+					<label>Review Form Fields Before</label>
+					<action method="setMayBeInvisible"><value>1</value></action>
+				</block>
+			</block>
+        </reference>
+		
+		<!-- Remove product tags block (tags are already inserted as a tab) -->
+		<reference name="product.info.additional">
+			<action method="unsetChild"><name>product_tag_list</name></action>
+		</reference>
+		
+		<!-- Remove "add to wishlist/compare" links from options box. It is already inserted on product view. -->
+		<reference name="product.info.options.wrapper.bottom">
+			<action method="unsetChild"><name>product.info.addto</name></action>
+		</reference>
+
+	</catalog_product_view>
+
+
+	<!-- CATEGORY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	
+	<!-- Default category (without layered navigation) -->
+	<catalog_category_default>
+	
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+		<reference name="left">
+            
+            <block type="cms/block" name="block_banner_left">
+                <action method="setBlockId"><block_id>block_banner_left</block_id></action>
+            </block>
+            <block type="cms/block" name="block_facebook_left">
+                <action method="setBlockId"><block_id>block_facebook_left</block_id></action>
+            </block>
+        </reference>
+		<reference name="product_list">
+			<!-- HOWTO: Change review summary template. IMPORTANT: new template file.
+			<action method="addReviewSummaryTemplate"><type>short</type><template>review/helper/summary_short_nolinks.phtml</template></action> -->
+
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_banner_product" after="">
+                <action method="setBlockId"><block_id>block_banner_product</block_id></action>
+            </block>
+			<block type="cms/block" name="block_category_above_collection">
+                <action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+            </block>
+			<block type="cms/block" name="block_category_below_collection">
+                <action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+            </block>
+			
+		</reference>
+		
+		<!-- Remove currency switcher from sidebar -->
+		<reference name="left">
+			
+			<action method="unsetChild"><name>currency</name></action>
+
+		</reference>
+
+	</catalog_category_default>
+
+	<!-- Category with layered navigation -->
+	<catalog_category_layered>
+	
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+		
+		<reference name="left">
+			<!-- Keep layered navigation always on top. Replace: after="currency" with: before="-" -->
+			<!--<action method="unsetChild"><name>catalog.leftnav</name></action>
+            <block type="catalog/layer_view" name="catalog.leftnav" before="-" template="catalog/layer/view.phtml"/>-->
+			
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>
+			
+			<!-- Sidebar navigation (categories) -->
+			<block type="cms/block" name="block_banner-left">
+                <action method="setBlockId"><block_id>block_banner_left</block_id></action>
+            </block>
+            <block type="cms/block" name="block_facebook-left">
+                <action method="setBlockId"><block_id>block_facebook_left</block_id></action>
+            </block>
+        </reference>
+		
+		<reference name="product_list">
+			<block type="cms/block" name="block_banner_product" after="">
+                <action method="setBlockId"><block_id>block_banner_product</block_id></action>
+            </block>
+			<!-- Custom static blocks -->
+			<block type="cms/block" name="block_category_above_collection">
+                <action method="setBlockId"><block_id>block_category_above_collection</block_id></action>
+            </block>
+			<block type="cms/block" name="block_category_below_collection">
+                <action method="setBlockId"><block_id>block_category_below_collection</block_id></action>
+            </block>
+			
+		</reference>
+		
+	</catalog_category_layered>
+	
+	<!-- IMPORTANT: deprecated -->
+	<catalog_category_layered_nochildren>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+	</catalog_category_layered_nochildren>
+	
+	
+	<!-- CART %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<checkout_cart_index>
+
+		<!-- Custom static blocks -->
+		<reference name="checkout.cart">
+		
+			<block type="cms/block" name="block_cart_below_table">
+                <action method="setBlockId"><block_id>block_cart_below_table</block_id></action>
+            </block>
+			<block type="cms/block" name="block_cart_below_totals">
+                <action method="setBlockId"><block_id>block_cart_below_totals</block_id></action>
+            </block>
+				
+		</reference>
+		
+	</checkout_cart_index>
+	
+	
+	<!-- CHECKOUT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<checkout_onepage_index>
+		
+		<!-- Block below progress block, inserted directly -->
+		<reference name="right">
+			<block type="page/html_wrapper" name="i_block_opc_below_progress">
+				<action method="setElementClass"><value>block block_opc_below_progress std</value></action>
+				<block type="cms/block" name="block_checkout_below_progress" after="checkout.progress.wrapper">
+                	<action method="setBlockId"><block_id>block_checkout_below_progress</block_id></action>
+            	</block>
+			</block>
+		</reference>
+	
+	</checkout_onepage_index>
+
+
+	<!-- SEARCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	
+	<!-- Quick search -->
+	<catalogsearch_result_index>
+	
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+		</reference>
+		
+		<reference name="left">
+			<!-- Keep layered navigation always on top. Replace: after="currency" with: before="-" -->
+			<!--<action method="unsetChild"><name>catalogsearch.leftnav</name></action>
+			<block type="catalogsearch/layer" name="catalogsearch.leftnav" before="-" template="catalog/layer/view.phtml"/>-->
+			
+			<!-- Remove currency switcher from sidebar -->
+			<action method="unsetChild"><name>currency</name></action>
+        </reference>
+	
+	</catalogsearch_result_index>
+	
+	<!-- Advanced search -->
+	<catalogsearch_advanced_index>
+	
+		<!-- Remove (right) currency switcher from sidebar -->
+		<reference name="left">
+			<action method="unsetChild"><name>right_currency</name></action>
+		</reference>
+		
+	</catalogsearch_advanced_index>
+	
+	<!-- Advanced search results -->
+	<catalogsearch_advanced_result>
+	
+		<reference name="content">
+			<!-- IMPORTANT: first remove previous version of the block -->
+			<action method="unsetChild"><name>catalogsearch_advanced_result</name></action>
+            <block type="catalogsearch/advanced_result" name="catalogsearch_advanced_result" template="catalogsearch/advanced/result.phtml">
+                <block type="catalog/product_list" name="search_result_list" template="catalog/product/list.phtml">
+                    <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                        <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                    </block>
+                    <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                    <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+                    <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+					<action method="setColumnCount"><count>3</count></action> <!-- Set column count (from Modern) -->
+                </block>
+                <action method="setListOrders"/>
+                <action method="setListModes"/>
+                <action method="setListCollection"/>
+            </block>
+        </reference>
+		
+		<!-- Remove (right) currency switcher from RIGHT sidebar -->
+		<reference name="right">
+			<action method="unsetChild"><name>right_currency</name></action>
+		</reference>
+		
+	</catalogsearch_advanced_result>
+	
+	<!-- Popular terms
+	<catalogsearch_term_popular>
+	</catalogsearch_term_popular>
+	-->
+
+
+	<!-- REVIEWS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<review_product_list>
+
+		<!-- Change template (previous: 2columns-right). IMPORTANT: same as 'catalog_product_view'. -->
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+		
+	</review_product_list>
+
+
+	<!-- CUSTOMER ACCOUNT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<customer_account>
+
+		<reference name="left">
+			<!-- Remove cart from the left column -->
+			<action method="unsetChild"><name>cart_sidebar</name></action>
+			
+			<!-- Remove Compare block, it is already inserted in DEFAULT section -->
+			<action method="unsetChild"><name>catalog.compare.sidebar</name></action>
+		</reference>
+
+	</customer_account>
+
+
+	<!-- ALL CMS PAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<!-- Remove static blocks displayed on CMS pages from these pages: home page, 404 no route 
+		IMPORTANT: make sure that you use correct ID -->
+	<cms_index_noroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_noroute>
+	<cms_index_defaultnoroute>
+		<remove name="i_block_cms_page_top"/>
+		<remove name="block_right_top"/>
+		<remove name="block_right_bottom"/>
+	</cms_index_defaultnoroute>
+	<cms_index_index>
+		<remove name="i_block_cms_page_top"/>
+    </cms_index_index>
+	
+	
+	<!-- HOME PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+	<cms_index_index>
+		<!-- Preface ====================================================================== -->		<reference name="head">						<action method="addJs"><script>cmsmart/jquery/lazyload/jquery.lazyload.pack.js</script></action>				<action method="addJs"><script>cmsmart/jquery/lazyload/lazyload.js</script></action>					</reference>		
+		<reference name="preface">
+			<block type="cms/block" name="block_home_brands">
+                <action method="setBlockId"><block_id>block_home_brands</block_id></action>
+            </block>
+		</reference>
+		<!-- adverthome ====================================================================== -->
+		<reference name="adverthome">
+            <block type="themesetting/navigation" name="advert-home" template="page/html/advert-home.phtml" before="-">
+            	<block type="cms/block" name="block_advert_left">
+                         <action method="setBlockId"><block_id>block_advert_left</block_id></action>
+                 </block>
+                <block type="cms/block" name="block_advert_middle">
+                         <action method="setBlockId"><block_id>block_advert_middle</block_id></action>
+                 </block>
+                 <block type="cms/block" name="block_advert_right">
+                         <action method="setBlockId"><block_id>block_advert_right</block_id></action>
+                 </block> 
+
+         	</block> 
+        </reference> 
+      <reference name="content">
+    
+      		<block type="cms/block" name="block_advert_bottom" after="Featured Products">
+               <action method="setBlockId"><block_id>block_advert_bottom</block_id></action>
+          </block>
+      
+      
+      </reference> 
+     
+		<!-- Left column ====================================================================== -->
+		<reference name="left">
+			<block type="core/text_list" name="home_left" as="home_left" translate="label" before="-">
+                <label>Home Left</label>
+            </block>
+			
+			<!-- Disable left sidebar blocks on home page -->
+			<action ifconfig="themesetting/sidebar_blocks_home/compare" method="unsetChild"><name>catalog.compare.sidebar</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/compared" method="unsetChild"><name>right.reports.product.compared</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/viewed" method="unsetChild"><name>left.reports.product.viewed</name></action>
+			
+			<action ifconfig="themesetting/sidebar_blocks_home/wishlist" method="unsetChild"><name>wishlist</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/poll" method="unsetChild"><name>right.poll</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/tags" method="unsetChild"><name>tags_popular</name></action>
+			
+			
+			<action ifconfig="themesetting/sidebar_blocks_home/block_left_top" method="unsetChild"><name>block_left_top</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/block_left_bottom" method="unsetChild"><name>block_left_bottom</name></action>
+		</reference>
+		
+		<reference name="home_left">
+			<block type="cms/block" name="block_home_left1">
+                <action method="setBlockId"><block_id>block_home_left1</block_id></action>
+            </block>
+			
+		</reference>
+		
+		<!-- Right column ====================================================================== -->
+		<reference name="right">
+			<block type="core/text_list" name="home_right" as="home_right" translate="label" before="-">
+                <label>Home Left</label>
+            </block>
+			
+			<!-- Disable right sidebar blocks on home page -->
+			<action ifconfig="themesetting/sidebar_blocks_home/block_right_top" method="unsetChild"><name>block_right_top</name></action>
+			<action ifconfig="themesetting/sidebar_blocks_home/block_right_bottom" method="unsetChild"><name>block_right_bottom</name></action>
+		</reference>
+		
+		<reference name="home_right">
+			<block type="cms/block" name="block_home_right1">
+                <action method="setBlockId"><block_id>block_home_right1</block_id></action>
+            </block>
+			
+		</reference>
+		
+		<!-- Postscript ====================================================================== -->
+		<reference name="postscript">
+			<block type="cms/block" name="block_home_postscript">
+                <action method="setBlockId"><block_id>block_home_postscript</block_id></action>
+            </block>
+		</reference>
+	
+	</cms_index_index>
+
+</layout>

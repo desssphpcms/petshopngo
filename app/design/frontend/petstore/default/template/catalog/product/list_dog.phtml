@@ -1,0 +1,46 @@
+<?php
+
+$cat_id = 3; // category id$category = Mage::getModel('catalog/category')->load($cat_id); $todayDate  = Mage::app()->getLocale()->date()->toString(Varien_Date::DATETIME_INTERNAL_FORMAT);      
+                        $products = $category->getProductCollection()->addCategoryFilter($category)->addAttributeToFilter('news_from_date', array('date' => true, 'to' => $todayDate))->addAttributeToFilter('news_to_date', array('or'=> array(
+        0 => array('date' => true, 'from' => $todayDate),
+        1 => array('is' => new Zend_Db_Expr('null')))
+), 'left')->            addAttributeToSelect('*');
+
+if (($_products = $this->getProductCollection()) && $_products->getSize()): ?><div class="hp-report">
+    <div class="head-alt">
+        <h2 class="title"><?php echo $this->__(' New Product') ?></h2>
+    </div>
+    <table cellspacing="0" class="generic-product-grid" id="new-products-list-table">
+        <tr>
+        <?php $i=0; foreach ($_products->getItems() as $_product): ?>
+            <?php if ($i>=4): continue; endif; ?>
+      
+            <td>
+                <p class="product-image">
+                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><img src="<?php echo $_product->getResource()->getAttribute('external_url')->getFrontend()->getValue($_product) ?>" width="180" height="180" alt="<?php echo $this->htmlEscape($_product->getName()) ?>" /></a>
+                </p>
+                <p><a class="product-name" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>)"><?php echo $this->htmlEscape($_product->getName()) ?></a></p>
+                <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                <?php echo $this->getPriceHtml($_product, true, '-new') ?>
+                <?php if($_product->isSaleable()): ?>
+                    <a href="<?php echo $this->getAddToCartUrl($_product) ?>"><img src="<?php echo $this->getSkinUrl('images/btn_add_to_cart.gif') ?>" alt="<?php echo $this->__('Add to Cart') ?>" title="<?php echo $this->__('Add to Cart') ?>" /></a>
+                <?php else: ?>
+                <div class="out-of-stock"><?php echo $this->__('Out of stock') ?></div>
+                <?php endif; ?>
+                <div class="clear"></div>
+                <ul class="add-to">
+                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                        <li><a href="<?php echo $this->getAddToWishlistUrl($_product) ?>" class="link-cart"><?php echo $this->__('Add to Wishlist') ?></a></li>
+                    <?php endif; ?>
+                    <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                        <li><a href="<?php echo $_compareUrl ?>"><?php echo $this->__('Add to Compare') ?></a></li>
+                    <?php endif; ?>
+                </ul>
+                </td>
+        <?php $i++; endforeach; ?>
+        <?php for($i;$i%4!=0;$i++): ?>
+                <td>&nbsp;</td>
+            <?php endfor ?>
+            </tr>
+    </table>
+    <script type="text/javascript">decorateTable('new-products-list-table');</script></div><?php endif; ?> 

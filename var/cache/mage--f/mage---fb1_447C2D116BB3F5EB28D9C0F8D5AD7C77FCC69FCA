@@ -1,0 +1,24 @@
+<div class="block block-layered-nav">
+    <div class="block-title">
+        <strong><span>Browse By</span></strong>
+    </div>
+    <div class="block-content">
+        <dl id="narrow-by-list2">
+            <dt>Category</dt>
+            <dd>
+                <ol>
+                                                        <li>
+                        <a href="http://petshopngo.com/index.php/fish/pond-supplies?___SID=U">Pond Supplies</a> (11)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/fish/habitat?___SID=U">Habitat</a> (31)
+                    </li>
+                                                                            <li>
+                        <a href="http://petshopngo.com/index.php/fish/habitat-7?___SID=U">Habitat</a> (0)
+                    </li>
+                                                    </ol>
+            </dd>
+        </dl>
+        <script type="text/javascript">decorateDataList('narrow-by-list2')</script>
+    </div>
+</div>
